@@ -1,4 +1,4 @@
-<template>
+<template lang="zh-cn">
   <div id="app">
     <!-- <div>
       <router-link to="/navbar">
