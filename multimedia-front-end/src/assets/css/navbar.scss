@@ -1,0 +1,79 @@
+html,
+body,
+#app{
+  height: 100%;
+}
+
+.navbar {
+  height: 99.9%;
+  background-color: rgb(236, 234, 223);
+  //background-image: url('~@/assets/img/navbar/background.png');
+  position: relative;
+  //text-align: center;
+  
+  .card{
+    background-image: url('~@/assets/img/navbar/card.png');
+    background-size: 100% 100%;
+    //display: inline-block;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 100;
+    div{
+      padding: 100px 240px;
+      ul{
+        li{
+          // margin-left: 200px;
+          // margin-top: 14px;
+          // position: absolute;
+          padding-bottom: 10px;
+          margin-bottom: 2px;
+          cursor: pointer;
+          &:hover{
+            border-bottom: 2px solid black;
+          }
+          span{
+            color: rgb(67, 67, 67);
+            font-weight: 100;
+          }
+          span:first-child{
+            font-size: 50px;
+          }
+          span:last-child{
+            font-size: 35px;
+          }
+        }
+      }
+    }
+  }
+
+  .cloud1{
+    position: absolute;
+    left: 60px;
+    top: 200px;
+  }
+  .cloud2{
+    position: absolute;
+    right: 40px;
+    top: 280px;
+  }
+  .cloud3{
+    position: absolute;
+    left: 60px;
+    bottom: 280px;
+  }
+  .cloud4{
+    position: absolute;
+    right: 50px;
+    bottom: 200px;
+  }
+  .btn-close{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 100px;
+    top: 50px;
+  }
+}
