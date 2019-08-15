@@ -3,11 +3,11 @@
     <div class="card">
       <card/>
     </div>
-    <img src="~@/assets/img/navbar/cloud1.png" alt="" class="cloud1">
-    <img src="~@/assets/img/navbar/cloud2.png" alt="" class="cloud2">
-    <img src="~@/assets/img/navbar/cloud3.png" alt="" class="cloud3">
-    <img src="~@/assets/img/navbar/cloud4.png" alt="" class="cloud4">
-    <img src="~@/assets/img/navbar/btn-close.png" alt="" class="btn-close">
+    <img draggable="false" src="~@/assets/img/navbar/cloud1.png" alt="" class="cloud1">
+    <img draggable="false" src="~@/assets/img/navbar/cloud2.png" alt="" class="cloud2">
+    <img draggable="false" src="~@/assets/img/navbar/cloud3.png" alt="" class="cloud3">
+    <img draggable="false" src="~@/assets/img/navbar/cloud4.png" alt="" class="cloud4">
+    <img draggable="false" src="~@/assets/img/navbar/btn-close.png" alt="" class="btn-close">
   </div>
 </template>
 
