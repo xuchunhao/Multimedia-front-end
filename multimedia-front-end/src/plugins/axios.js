@@ -3,6 +3,8 @@
 import Vue from 'vue';
 import axios from "axios";
 
+axios.defaults.baseURL = 'https://dmt.lcworkroom.cn';
+axios.defaults.headers.post['Content-Type'] = 'application/json';
 // Full config:  https://github.com/axios/axios#request-config
 // axios.defaults.baseURL = process.env.baseURL || process.env.apiUrl || '';
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;

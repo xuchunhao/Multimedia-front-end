@@ -53,21 +53,48 @@ body,
     position: absolute;
     left: 60px;
     top: 200px;
+    animation: float-l 10s infinite;
   }
   .cloud2{
     position: absolute;
     right: 40px;
     top: 280px;
+    animation: float-r 10s infinite;
   }
   .cloud3{
     position: absolute;
     left: 60px;
     bottom: 280px;
+    animation: float-l 10s infinite;
   }
   .cloud4{
     position: absolute;
     right: 50px;
     bottom: 200px;
+    animation: float-r 10s infinite;
+  }
+
+  @keyframes float-l {
+    0%{
+      left: 10px;
+    }
+    50%{
+      left: 1590px;
+    }
+    100%{
+      left: 10px;
+    }
+  }
+  @keyframes float-r {
+    0%{
+      right: 10px;
+    }
+    50%{
+      right: 1640px;
+    }
+    100%{
+      right: 10px;
+    }
   }
   .btn-close{
     position: absolute;
