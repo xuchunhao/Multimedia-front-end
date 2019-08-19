@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="card">
     <ul>
       <li>
         <span>简介</span>

@@ -1,0 +1,93 @@
+html,
+body,
+#app,
+.home{
+  height: 100%;
+}
+
+.home{
+  background-image: url('~@/assets/img/home/background.png');
+  position: relative;
+
+  .content{
+    display: flex;
+    justify-content: center;
+    .box{
+      position: absolute;
+      width: 23%;
+      top: 7%;
+      
+      .title{
+        width: 75%;
+      }
+      .seal{
+        width: 18%;
+        float: right;
+        margin-top: 40%;
+      }
+    }
+  
+    .logo-content{
+      position: absolute;
+      bottom: 14%;
+      width: 28%;
+      .logo{
+        width: 100%;
+      }
+    }
+  }
+  // .test{
+  //   border: 1px solid black;
+  //   align-items: center;
+  //   padding-top: 3%;
+  //   .title{
+  //     width: 100%;
+  //   }
+  //   .seal{
+  //     width: 100%;
+  //     margin-top: 200px;
+  //   }
+  // }
+  // .test1{
+  //   border: 1px solid black;
+  //   align-items: center;
+  // }
+
+  // .logo-content{
+  //   //position: absolute;
+  //   //bottom: 100px;
+  //   .logo{
+  //     width: 100%;
+  //   }
+  // }
+  .btn-threeline{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+  }
+  .cloud1{
+    position: absolute;
+    left: 405px;
+    top: 204px;
+  }
+  .cloud2{
+    position: absolute;
+    right: 690px;
+    top: 123px;
+  }
+  .cloud3{
+    position: absolute;
+    left: 565px;
+    top: 432px;
+  }
+  .cloud4{
+    position: absolute;
+    right: 484px;
+    top: 430px;
+  }
+  .footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+  }
+}

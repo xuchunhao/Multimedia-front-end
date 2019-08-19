@@ -1,8 +1,10 @@
 <template>
   <div class="navbar">
-    <div class="card">
-      <card/>
-    </div>
+    <el-row type="flex" justify="center" class="align-center">
+      <el-col :xs="24" :sm="24" :md="21" :lg="18" :xl="18">
+        <card/>
+      </el-col>
+    </el-row>
     <img draggable="false" src="~@/assets/img/navbar/cloud1.png" alt="" class="cloud1">
     <img draggable="false" src="~@/assets/img/navbar/cloud2.png" alt="" class="cloud2">
     <img draggable="false" src="~@/assets/img/navbar/cloud3.png" alt="" class="cloud3">

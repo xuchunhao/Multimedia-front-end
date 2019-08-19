@@ -1,18 +1,50 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <el-row type="flex" justify="center" class="test">
+      <el-col :span="5" class="test1">
+        <el-row type="flex" justify="space-between">
+          <el-col :span="19">
+            <img src="~@/assets/img/home/title.png" alt="" class="title">
+          </el-col>
+          <el-col :span="3">
+            <img src="~@/assets/img/home/seal.png" alt="" class="seal">
+          </el-col>
+        </el-row>
+      </el-col>
+    </el-row>
+    <el-row type="flex" justify="center" class="logo-content">
+      <el-col :span="8">
+        <img src="~@/assets/img/home/logo.png" alt="" class="logo">
+      </el-col>
+    </el-row> -->
+    <div class="content">
+      <div class="box">
+        <img src="~@/assets/img/home/title.png" alt="" class="title" draggable="false">
+        <img src="~@/assets/img/home/seal.png" alt="" class="seal" draggable="false">
+      </div>
+      <div class="logo-content">
+        <img src="~@/assets/img/home/logo.png" alt="" class="logo" draggable="false">
+      </div>
+    </div>
+    <img src="~@/assets/img/home/btn-threeline.png" alt="" class="btn-threeline">
+    <img draggable="false" src="~@/assets/img/home/cloud1.png" alt="" class="cloud1">
+    <img draggable="false" src="~@/assets/img/home/cloud2.png" alt="" class="cloud2">
+    <img draggable="false" src="~@/assets/img/home/cloud3.png" alt="" class="cloud3">
+    <img draggable="false" src="~@/assets/img/home/cloud4.png" alt="" class="cloud4">
+    <img src="~@/assets/img/home/footer.png" alt="" class="footer" draggable="false">
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    
   }
 }
 </script>
+
+<style lang="sass">
+  @import '@/assets/css/home.scss'
+</style>

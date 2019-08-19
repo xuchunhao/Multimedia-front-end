@@ -3,6 +3,9 @@
     <router-link to="/navbar">
       导航栏
     </router-link>
+    <router-link to="/home">
+      首页
+    </router-link>
   </div>
 </template>
 
