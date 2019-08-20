@@ -1,4 +1,4 @@
-<template>
+<template lang="zh">
   <div class="navbar">
     <el-row type="flex" justify="center" class="align-center">
       <el-col :xs="24" :sm="24" :md="21" :lg="18" :xl="18">
