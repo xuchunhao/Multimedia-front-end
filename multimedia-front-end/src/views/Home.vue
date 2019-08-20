@@ -19,19 +19,19 @@
     </el-row> -->
     <div class="content">
       <div class="box">
-        <img src="~@/assets/img/home/title.png" alt="" class="title" draggable="false">
-        <img src="~@/assets/img/home/seal.png" alt="" class="seal" draggable="false">
+        <img src="~@/assets/img/home/title.webp" alt="" class="title" draggable="false">
+        <img src="~@/assets/img/home/seal.webp" alt="" class="seal" draggable="false">
       </div>
       <div class="logo-content">
-        <img src="~@/assets/img/home/logo.png" alt="" class="logo" draggable="false">
+        <img src="~@/assets/img/home/logo.webp" alt="" class="logo" draggable="false">
       </div>
     </div>
     <img src="~@/assets/img/home/btn-threeline.png" alt="" class="btn-threeline">
-    <img draggable="false" src="~@/assets/img/home/cloud1.png" alt="" class="cloud1">
-    <img draggable="false" src="~@/assets/img/home/cloud2.png" alt="" class="cloud2">
-    <img draggable="false" src="~@/assets/img/home/cloud3.png" alt="" class="cloud3">
-    <img draggable="false" src="~@/assets/img/home/cloud4.png" alt="" class="cloud4">
-    <img src="~@/assets/img/home/footer.png" alt="" class="footer" draggable="false">
+    <img draggable="false" src="~@/assets/img/home/cloud1.webp" alt="" class="cloud1">
+    <img draggable="false" src="~@/assets/img/home/cloud2.webp" alt="" class="cloud2">
+    <img draggable="false" src="~@/assets/img/home/cloud3.webp" alt="" class="cloud3">
+    <img draggable="false" src="~@/assets/img/home/cloud4.webp" alt="" class="cloud4">
+    <img src="~@/assets/img/home/footer.webp" alt="" class="footer" draggable="false">
   </div>
 </template>
 

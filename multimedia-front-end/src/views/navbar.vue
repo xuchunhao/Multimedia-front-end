@@ -5,10 +5,10 @@
         <card/>
       </el-col>
     </el-row>
-    <img draggable="false" src="~@/assets/img/navbar/cloud1.png" alt="" class="cloud1">
-    <img draggable="false" src="~@/assets/img/navbar/cloud2.png" alt="" class="cloud2">
-    <img draggable="false" src="~@/assets/img/navbar/cloud3.png" alt="" class="cloud3">
-    <img draggable="false" src="~@/assets/img/navbar/cloud4.png" alt="" class="cloud4">
+    <img draggable="false" src="~@/assets/img/navbar/cloud1.webp" alt="" class="cloud1">
+    <img draggable="false" src="~@/assets/img/navbar/cloud2.webp" alt="" class="cloud2">
+    <img draggable="false" src="~@/assets/img/navbar/cloud3.webp" alt="" class="cloud3">
+    <img draggable="false" src="~@/assets/img/navbar/cloud4.webp" alt="" class="cloud4">
     <img draggable="false" src="~@/assets/img/navbar/btn-close.png" alt="" class="btn-close">
   </div>
 </template>

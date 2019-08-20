@@ -17,26 +17,25 @@ export default {
   name:'index',
   mounted () {
     axios.post('/api/captcha',{
-      params: {
+      // params: {
         "id":1, 
         "type":"img",
         "subtype":"generate",
-        "status":0,
         "data":{}
-      }
+      // }
     }).then(res => {
-      //console.log(res)
+      console.log(res)
       }
     )
     api.test({
-      params: {
+      // params: {
         "id":1, 
         "type":"img",
         "subtype":"generate",
         "data":{}
-      }
+      // }
     }).then(res => {
-      console.log(res)
+      // console.log(res)
       }
     )
   }
