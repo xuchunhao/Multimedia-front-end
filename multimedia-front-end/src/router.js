@@ -36,6 +36,27 @@ export default new Router({
       path: '/register',
       name: 'register',
       component: () => import('@/views/register.vue')
+    },{
+      path: '/default',
+      name: 'default',
+      component: () => import('@/views/default.vue'),
+      children:[{
+        path: '/introduce',
+        name: 'introduce',
+        component: () => import('@/components/introduce.vue')
+      },{
+        path: '/technology',
+        name: 'technology',
+        component: () => import('@/components/technology.vue')
+      },{
+        path: '/source',
+        name: 'source',
+        component: () => import('@/components/source.vue')
+      },{
+        path: '/inherit',
+        name: 'inherit',
+        component: () => import('@/components/inherit.vue')
+      }]
     }
     
   ]
