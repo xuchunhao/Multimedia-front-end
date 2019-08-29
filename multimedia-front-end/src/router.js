@@ -57,6 +57,14 @@ export default new Router({
         name: 'inherit',
         component: () => import('@/components/inherit.vue')
       }]
+    },{
+      path: '/protrait',
+      name: 'protrait',
+      component: () => import('@/components/protrait.vue')
+    },{
+      path: '/test',
+      name: 'test',
+      component: () => import('@/components/test.vue')
     }
     
   ]

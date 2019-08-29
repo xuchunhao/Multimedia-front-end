@@ -12,6 +12,9 @@
     <router-link to="/login">
       登录
     </router-link>
+    <router-link to="/test">
+      头像
+    </router-link>
   </div>
 </template>
 
@@ -22,28 +25,7 @@ import api from '@/api/index.js'
 export default {
   name:'index',
   mounted () {
-    axios.post('/api/captcha',{
-      // params: {
-        "id":1, 
-        "type":"img",
-        "subtype":"generate",
-        "data":{}
-      // }
-    }).then(res => {
-      console.log(res)
-      }
-    )
-    api.test({
-      // params: {
-        "id":1, 
-        "type":"img",
-        "subtype":"generate",
-        "data":{}
-      // }
-    }).then(res => {
-      // console.log(res)
-      }
-    )
+    
   }
 }
 </script>

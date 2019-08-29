@@ -12,7 +12,7 @@ var api = {
   },
   login(params) {
     return axios.post('/api/user/login',params)
-  },
+  }
 }
 
 export default api
