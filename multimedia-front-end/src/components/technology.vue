@@ -1,11 +1,14 @@
 <template>
   <div class="technology">
-    工艺
+    <wheel/>
   </div>
 </template>
 
 <script>
+import wheel from '@/components/wheel.vue'
 export default {
-  
+  components:{
+    wheel
+  }
 }
 </script>

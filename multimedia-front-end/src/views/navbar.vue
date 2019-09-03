@@ -5,20 +5,19 @@
         <card/>
       </el-col>
     </el-row>
-    <img draggable="false" src="~@/assets/img/navbar/cloud1.webp" alt="" class="cloud1">
-    <img draggable="false" src="~@/assets/img/navbar/cloud2.webp" alt="" class="cloud2">
-    <img draggable="false" src="~@/assets/img/navbar/cloud3.webp" alt="" class="cloud3">
-    <img draggable="false" src="~@/assets/img/navbar/cloud4.webp" alt="" class="cloud4">
+    <cloud/>
     <img draggable="false" src="~@/assets/img/navbar/btn-close.png" alt="" class="btn-close">
   </div>
 </template>
 
 <script>
 import card from '@/components/card.vue'
+import cloud from '@/components/cloud.vue'
 export default {
   name:'navbar',
   components:{
-    card
+    card,
+    cloud
   }
 }
 </script>

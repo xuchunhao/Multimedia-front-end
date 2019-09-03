@@ -151,7 +151,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 /* 弹性布局 水平居中 */
 .show-preview {
   display: flex;

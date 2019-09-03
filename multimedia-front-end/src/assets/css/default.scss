@@ -6,13 +6,37 @@ body,
 
 .default{
   height: 100%;
-  background-color: rgb(236, 234, 223);
-  text-align: center;
+  background-color: rgb(165, 42, 26);
+  position: relative;
+  .default-header{
+    text-align: center;
+    .title{
+      position: absolute;
+      left: 300px;
+      top: 50px;
+    }
+    .drum{
+      position: absolute;
+      left: 680px;
+      top: 30px;
+    }
+  }
   .default-card{
-    background-image: url('~@/assets/img/navbar/card.webp');
+    background-image: url('~@/assets/img/default/card.webp');
     background-size: 100% 100%;
     height: 500px;
     padding: 100px;
+    margin-top: 9%;
+  }
+  .btn-index{
+    position: absolute;
+    left: 120px;
+    top: 60px;
+  }
+  .btn-return{
+    position: absolute;
+    right: 120px;
+    top: 60px;
   }
 }
 

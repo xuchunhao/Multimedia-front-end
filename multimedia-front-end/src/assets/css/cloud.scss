@@ -1,0 +1,51 @@
+.cloud1{
+  position: absolute;
+  left: 60px;
+  top: 200px;
+  animation: float-l 40s linear infinite;
+}
+.cloud2{
+  position: absolute;
+  right: 40px;
+  top: 280px;
+  animation: float-r 40s linear infinite;
+}
+.cloud3{
+  position: absolute;
+  left: 60px;
+  bottom: 280px;
+  animation: float-l 40s linear infinite;
+}
+.cloud4{
+  position: absolute;
+  right: 50px;
+  bottom: 200px;
+  animation: float-r 40s linear infinite;
+}
+
+@keyframes float-l {
+  0%{
+    left: 10px;
+    // right: none;
+  }
+  50%{
+    left: 1590px;
+    // left: none;
+    // right: 10px;
+  }
+  100%{
+    left: 10px;
+    // right: none;
+  }
+}
+@keyframes float-r {
+  0%{
+    right: 10px;
+  }
+  50%{
+    right: 1640px;
+  }
+  100%{
+    right: 10px;
+  }
+}
