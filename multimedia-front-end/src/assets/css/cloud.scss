@@ -1,22 +1,26 @@
 .cloud1{
+  opacity: 0.5;
   position: absolute;
   left: 60px;
   top: 200px;
   animation: float-l 40s linear infinite;
 }
 .cloud2{
+  opacity: 0.5;
   position: absolute;
   right: 40px;
   top: 280px;
   animation: float-r 40s linear infinite;
 }
 .cloud3{
+  opacity: 0.5;
   position: absolute;
   left: 60px;
   bottom: 280px;
   animation: float-l 40s linear infinite;
 }
 .cloud4{
+  opacity: 0.5;
   position: absolute;
   right: 50px;
   bottom: 200px;
@@ -29,7 +33,7 @@
     // right: none;
   }
   50%{
-    left: 1590px;
+    left: 1560px;
     // left: none;
     // right: 10px;
   }
