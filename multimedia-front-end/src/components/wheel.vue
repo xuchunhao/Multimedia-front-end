@@ -10,7 +10,6 @@
             v-for="(item,index) in materialList"
             :key="index"
             @click="materialKeyEdit(index)"
-            :class="{'blue':index==materialKey}"
           >
             <div> 
               <div>
@@ -88,6 +87,7 @@ export default {
   name: "wheel",
   data() {
     return {
+      lastIndex: 0,
       showMaterial: true,
       materialList: [
         require("@/assets/img/home/cloud1.webp"),
@@ -139,8 +139,13 @@ export default {
     },
     materialKeyEdit(num) {
       // console.log(this.materialKey)
-
+      this.lastIndex = this.materialKey;
       this.materialKey = num;
+      let box = this.$refs["material-scroll"];
+      let px = box.style.marginTop;
+      let height = Number(px.substring(0, px.length - 2));
+      box.style.marginTop = height + 75 * (this.lastIndex - this.materialKey) + 'px'; 
+      console.log(3)
     },
     materialKeyAdd(num) {
       //上下键函数
