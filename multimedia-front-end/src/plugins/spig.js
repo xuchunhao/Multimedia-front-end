@@ -3,7 +3,15 @@ var visitor = '阁下';
 jQuery(document).ready(function ($) {
     $("#spig").mousedown(function (e) {
         if(e.which==3){
-        	showMessage("秘密通道:<br />    <img src=\"http://pic.sc.chinaz.com/Files/pic/Listfaces/3646/02.gif\"/><br/><a href=\"http://cnblogs.com/flipped\" title=\"水郁\">水郁</a>  ",10000);
+            showMessage("秘密通道:<br />    <img src=\"http://pic.sc.chinaz.com/Files/pic/Listfaces/3646/02.gif\"/><br/>\
+            <a href=\"#/home\" title=\"主页\">主页</a>\
+            <a href=\"#/introduce\" title=\"简介\">简介</a>\
+            <a href=\"#/technology\" title=\"工艺流程\">工艺流程</a>\
+            <a href=\"#/source\" title=\"溯源\">溯源</a>\
+            <a href=\"#/inherit\" title=\"文化传承\">文化传承</a>\
+            <a href=\"#/introduce\" title=\"简介\">简介</a>\
+            <a href=\"#/introduce\" title=\"简介\">简介</a>\
+            <a href=\"#/introduce\" title=\"简介\">简介</a>\  ",10000);
 		}
 	});
 	$("#spig").bind("contextmenu", function(e) {

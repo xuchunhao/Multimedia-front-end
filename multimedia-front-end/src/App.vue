@@ -53,7 +53,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scope>
 *{
   margin: 0;
   padding: 0;
@@ -88,6 +88,10 @@ export default {
     border-color:#eeeeee;
     box-shadow:0 0 15px #eeeeee;
     outline:none;
+    a{
+      color:red;
+      text-decoration: none;
+    }
 }
 .mumu{
     width:175px;

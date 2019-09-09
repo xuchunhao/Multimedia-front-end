@@ -56,6 +56,14 @@ export default new Router({
         path: '/inherit',
         name: 'inherit',
         component: () => import('@/components/inherit.vue')
+      },{
+        path: '/bbs',
+        name: 'bbs',
+        component: () => import('@/components/bbs.vue'),
+      },{
+        path:'/s/:name',
+        name:'article',
+        component: () => import('@/components/bbs/articleList.vue')
       }]
     },{
       path: '/protrait',
@@ -65,7 +73,11 @@ export default new Router({
       path: '/test',
       name: 'test',
       component: () => import('@/components/test.vue')
-    }
-    
+    },
+    // {
+    //   path:'/s/:name',
+    //   name:'article',
+    //   component: () => import('@/components/bbs/articleList.vue')
+    // }
   ]
 })
