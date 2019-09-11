@@ -1,20 +1,92 @@
 <template>
   <div class="introduce">
-    <img src="~@/assets/img/home/title.webp" alt="" class="img-one">
-    <p>中国是鼓的故乡，《诗经》里有“击鼓其镗，踊跃角兵”的记述。《左传》中有“援捋而鼓”的描述。古人祭祀时，“以鼓驱邪”，生活中也有“敲鼓报更”，这些记载便表明，鼓很早便在我国运用，并与劳动人民生活密切相连。枧桥鼓历史久远，世代相传，是源远流长的鼓文化在古城临海的遗存。</p>
-    <p>据现年八旬的枧桥村制鼓老艺人董丕足说：他蒙鼓的手艺是从他爷爷手中传下来，而他爷爷的手艺是从他爷爷的老太公手中传下来，可谓是五代相传。如今，枧桥村的枧桥鼓都挂出祖传鼓业、制鼓世家的称谓，还保留着传统家庭作坊式，并遗存着传婿不传媳、传儿不传女的习俗。</p>
-    <p>枧桥鼓传统制作工艺繁琐、周期长，一般一只大鼓需耗时6—7个月，其工艺工序为：一选材，选优质松木、樟木或楝树木，根据鼓的大小，锯成弧度，烘干木材围成鼓身。二选皮，选优质的牛皮或羊皮，放在水塘浸泡，使至脱毛，然后刮刨，至厚薄均匀。三蒙鼓皮，先将皮压在鼓身两端，用棒绳牵引使其皮面平整紧绷，并用铜钉、铁钉固定。四涂漆，先用纱布包绷鼓身，用水泥与胶水披灰，等干燥后磨光、上漆。</p>
-    <p>目前，枧桥董村共有五十多家制鼓作坊，为全国各地定制圆鼓，以董仁普等制鼓艺人较为有名。枧桥董村逐渐形成了制鼓基地和制鼓之乡。几百年来与百姓生活密切相连，并渗透到群众文化生活之中。枧桥村把制鼓当做一种文化现象，丰富其内涵，提高其品味，组建组合鼓队和腰鼓队，在江南长城节、台州市元宵节踩街等大型系列活动中频频亮相，2005年12月，中央电视台国际频道《华夏文明》栏目向全世界各国播放临海枧桥董村的制鼓工艺流程和各大特色大鼓，让更多的人了解历史文化名城临海。</p>
-    <img src="~@/assets/img/home/title.webp" alt="" class="img-two">
-    <p>随着我国对非物质文化遗产保护工程的实施，枧桥董村申报浙江省民族艺术产业基地。2006年6月被台州市、临海市两级人民政府分别列入首批非物质文化遗产名录；2007年6月。被浙江省人民政府列入第二批非物质文化遗产名录。邵家渡传统制鼓工艺不断得到改进和创新，形成不同规格，不同品种的系列产品，无论在外观上还是在音响上都独具一格，使传统的制鼓文化得以发扬光大。</p>
-    <p>枧桥村现能制作出各种大小平面鼓、牙鼓、手鼓、腰鼓、货郎鼓、战鼓、大鼓、排鼓等十多种，最大的直径有3.35米、高2.65米。使传统的制鼓文化得以发扬光大。2007年6月，枧桥鼓制作技艺成为第二批浙江省非物质文化遗产名录。</p>
+    <h2 style="text-align:center">简介</h2>
+    <introduce-main v-if="this.currentPage == 1" />
+    <kind v-if="this.currentPage == 2" :kind-list="kindList1" />
+    <kind v-if="this.currentPage == 3" :kind-list="kindList2" />
+    <el-pagination @current-change="currentChange" layout="prev, pager, next" :total="30"></el-pagination>
   </div>
 </template>
 
 <script>
+import introduceMain from '@/components/introduceMain.vue'
+import kind from '@/components/kind.vue'
 export default {
-  
-}
+  data () {
+    return {
+      currentPage:1,
+      kindList1:[
+        {
+          src:require("@/assets/img/kind/waist-drum.webp"),
+          name:"腰鼓",
+          appearance:"窄径，腰身高且略胖，高约80cm",
+          voice:"",
+          purpose:"挂在腰间击打，节日活动中使用"
+        },
+        {
+          src:require("@/assets/img/kind/opera-drum.webp"),
+          name:"戏鼓",
+          appearance:"鼓面略大，腰身略胖",
+          voice:"",
+          purpose:"戏剧团做戏时中使用"
+        },
+        {
+          src:require("@/assets/img/kind/hand-drum.webp"),
+          name:"手鼓",
+          appearance:"小巧易拿，腰身略胖，高约28cm",
+          voice:"",
+          purpose:"掌于手中击打，节日活动中使用"
+        },
+        {
+          src:require("@/assets/img/kind/toys-drum.webp"),
+          name:"玩具鼓",
+          appearance:"造型小巧，高约15cm",
+          voice:"",
+          purpose:"孩童玩耍时的玩具鼓"
+        },
+      ],
+      kindList2:[
+        {
+          src:require("@/assets/img/kind/activity-drum.webp"),
+          name:"活动鼓",
+          appearance:"鼓身中等，鼓面略大",
+          voice:"",
+          purpose:"日常风俗活动常用鼓"
+        },
+        {
+          src:require("@/assets/img/kind/big-drum.webp"),
+          name:"大鼓",
+          appearance:"鼓面庞大，鼓身厚重，直径1m以上，最大可达3.3m，此鼓为直径约1.8m",
+          voice:"雄浑",
+          purpose:"节目、祭祀等大型活动用鼓"
+        },
+        {
+          src:require("@/assets/img/kind/buddha-drum.webp"),
+          name:"佛鼓",
+          appearance:"通身木黄，鼓面带毛",
+          voice:"",
+          purpose:"寺庙法事活动用鼓"
+        },
+        {
+          src:require("@/assets/img/kind/command-drum.webp"),
+          name:"指挥鼓",
+          appearance:"窄径，腰身高，通身木黄",
+          voice:"清脆悦耳",
+          purpose:"活动演出中指挥用鼓"
+        },
+      ]
+    }
+  },
+  methods:{
+    currentChange (e) {
+      this.currentPage = e
+    }
+  },
+  components:{
+    introduceMain,
+    kind
+  }
+};
 </script>
 
 <style lang="sass">

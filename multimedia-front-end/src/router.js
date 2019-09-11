@@ -57,9 +57,17 @@ export default new Router({
         name: 'inherit',
         component: () => import('@/components/inherit.vue')
       },{
+        path: '/vr',
+        name: 'vr',
+        component: () => import('@/components/vr.vue')
+      },{
         path: '/bbs',
         name: 'bbs',
         component: () => import('@/components/bbs.vue'),
+      },{
+        path: '/wangediter',
+        name: 'wangediter',
+        component: () => import('@/components/wangediter.vue'),
       },{
         path:'/s/:name',
         name:'article',

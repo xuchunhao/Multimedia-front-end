@@ -1,0 +1,82 @@
+.source {
+	.time-line {
+		height: 38px;
+		border-bottom: 1px dashed #aaa;
+
+		> div {
+			position: absolute;
+		}
+
+		.first {
+			left: 400px;
+		}
+
+		.tang {
+			left: 620px;
+		}
+
+		.ming {
+			left: 840px;
+		}
+
+		.qing {
+			left: 1060px;
+		}
+
+		.jin {
+			left: 1280px;
+		}
+		.img1 {
+			background-image: url('~@/assets/img/source/小人1.0.webp');
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		.img2 {
+			background-image: url('~@/assets/img/source/小人2.0.webp');
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		button {
+			text-align: center;
+			color: black;
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			border: none;
+			&:hover {
+				background: white;
+				box-shadow: 1px 1px 10px #aaa;
+			}
+			&:focus {
+				background: white;
+				box-shadow: 1px 1px 10px #aaa;
+			}
+    }
+  }
+  .dynasty-content{
+    // >div{
+    //   >div{
+    //     border: 1px solid black;
+    //   }
+    // }
+    .el-row{
+      margin-left: 230px;
+      margin-top: 100px;
+      .el-col{
+        text-indent: 2em;
+        font-size: 20px;
+        padding: 20px;
+        line-height: 30px;
+        .transition-box{
+          border: 1px solid black;
+        }
+      }
+    }
+  }
+}
