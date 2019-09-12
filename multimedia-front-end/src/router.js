@@ -29,14 +29,6 @@ export default new Router({
       name: 'home',
       component: () => import('@/views/Home.vue')
     },{
-      path: '/login',
-      name: 'login',
-      component: () => import('@/views/login.vue')
-    },{
-      path: '/register',
-      name: 'register',
-      component: () => import('@/views/register.vue')
-    },{
       path: '/default',
       name: 'default',
       component: () => import('@/views/default.vue'),
@@ -72,6 +64,18 @@ export default new Router({
         path:'/s/:name',
         name:'article',
         component: () => import('@/components/bbs/articleList.vue')
+      },{
+        path: '/login',
+        name: 'login',
+        component: () => import('@/components/login.vue')
+      },{
+        path: '/register',
+        name: 'register',
+        component: () => import('@/components/register.vue')
+      },{
+        path: '/personal',
+        name: 'personal',
+        component: () => import('@/components/personal.vue')
       }]
     },{
       path: '/protrait',

@@ -1,4 +1,11 @@
 .bbs{
+  .user{
+    div{
+      button{
+        float: right;
+      }
+    }
+  }
   .bbs-content{
     padding: 20px 0;
     margin-top: 10px;
@@ -43,6 +50,7 @@
       }
     }
   }
+
 }
 
 // .info-delivery-content div .lost .lost-content {

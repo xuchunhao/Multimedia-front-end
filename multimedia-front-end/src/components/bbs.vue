@@ -1,6 +1,24 @@
 <template>
   <div class="bbs">
     <h2 style="text-align:center">游客论坛</h2>
+    <div class="user">
+      <div v-if="token == ''">
+        <router-link to="/login">
+          <el-button>登录</el-button>
+        </router-link>
+        <router-link to="/register">
+          <el-button>注册</el-button>
+        </router-link>
+      </div>
+      <div v-else>
+        <router-link to="/personal">
+          <el-button>个人中心</el-button>
+        </router-link>
+        <router-link to="/login">
+          <el-button>切换账号</el-button>
+        </router-link>
+      </div>
+    </div>
     <div class="bbs-content" v-for="(item,index) in articleList" :key="index">
       <router-link :to="{name:'article',params:{ name:item.article_id ,item:item}}" class="bbs-every" tag="div">
         <img :src="'https://dmt.lcworkroom.cn/api/get/portrait/' + item.user_id" alt />
@@ -41,7 +59,12 @@ import api from '@/api/index.js';
 export default {
   data () {
     return {
-      articleList :[]
+      articleList :[],
+    }
+  },
+  computed : {
+    token () {
+      return this.$store.state.token
     }
   },
   mounted () {

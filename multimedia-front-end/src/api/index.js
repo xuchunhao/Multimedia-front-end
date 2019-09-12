@@ -1,5 +1,6 @@
 import axios from 'axios'
-
+// let token = this.$store.state.token;
+// console.log(token);
 var api = {
   test(params) {
     return axios.post('/api/captcha',params)

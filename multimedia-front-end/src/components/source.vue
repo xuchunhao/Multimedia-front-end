@@ -5,22 +5,22 @@
       <div class="first">
         <div v-if="dynasty == ''" class="img1"></div>
       </div>
-      <div class="tang" @click="changeDynasty('tang')" @mouseleave="change">
+      <div class="tang" @mouseenter="changeDynasty('tang')" @mouseleave="change">
         <div v-if="dynasty == 'tang' && click == 'first'" class="img1"></div>
         <div v-else-if="dynasty == 'tang' && click == 'last'" class="img2"></div>
         <el-button v-else>唐</el-button>
       </div>
-      <div class="ming" @click="changeDynasty('ming')" @mouseleave="change">
+      <div class="ming" @mouseenter="changeDynasty('ming')" @mouseleave="change">
         <div v-if="dynasty == 'ming' && click == 'first'" class="img1"></div>
         <div v-else-if="dynasty == 'ming' && click == 'last'" class="img2"></div>
         <el-button v-else>明</el-button>
       </div>
-      <div class="qing" @click="changeDynasty('qing')" @mouseleave="change">
+      <div class="qing" @mouseenter="changeDynasty('qing')" @mouseleave="change">
         <div v-if="dynasty == 'qing' && click == 'first'" class="img1"></div>
         <div v-else-if="dynasty == 'qing' && click == 'last'" class="img2"></div>
         <el-button v-else>清</el-button>
       </div>
-      <div class="jin" @click="changeDynasty('jin')" @mouseleave="change">
+      <div class="jin" @mouseenter="changeDynasty('jin')" @mouseleave="change">
         <div v-if="dynasty == 'jin' && click == 'first'" class="img1"></div>
         <div v-else-if="dynasty == 'jin' && click == 'last'" class="img2"></div>
         <el-button v-else>今</el-button>
