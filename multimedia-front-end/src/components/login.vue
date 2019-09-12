@@ -21,6 +21,10 @@
       <el-col :span="1">
         <el-button @click="login">登录</el-button>
       </el-col>
+    </el-row><el-row type="flex" justify="center">
+      <el-col :span="4" class="to-register">
+        <router-link to="/register">还没账号？点击注册</router-link>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -49,10 +53,9 @@ export default {
           }
         })
         .then(res => {
-          console.log(res);
           if(res.data.status == 0){
-            alert("欢迎您");
             this.$store.state.token = res.data.data.token;
+            alert("欢迎您");
             this.$router.push({path : '/bbs'})
           }
         },error => {

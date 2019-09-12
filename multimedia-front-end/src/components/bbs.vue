@@ -2,15 +2,7 @@
   <div class="bbs">
     <h2 style="text-align:center">游客论坛</h2>
     <div class="user">
-      <div v-if="token == ''">
-        <router-link to="/login">
-          <el-button>登录</el-button>
-        </router-link>
-        <router-link to="/register">
-          <el-button>注册</el-button>
-        </router-link>
-      </div>
-      <div v-else>
+      <div>
         <router-link to="/personal">
           <el-button>个人中心</el-button>
         </router-link>
@@ -62,15 +54,17 @@ export default {
       articleList :[],
     }
   },
-  computed : {
-    token () {
-      return this.$store.state.token
-    }
-  },
   mounted () {
+    console.log(111)
+    if(this.$store.state.token == ''){
+      this.$router.push({path:'/login'})
+    }
+    console.log(222)
+    console.log(this.$store.state.token)
     api.getArticleList({
 
     }).then(res => {
+      console.log(res)
       this.articleList = res.data.data.list;
     })
   }
