@@ -13,19 +13,19 @@
           >
             <div> 
               <div>
-                <img v-if="index == materialKey - 2" style="max-width:100%;max-height:100%" class="first" :src="item" alt />
+                <img v-if="index == materialKey - 2" style="max-width:100%;max-height:100%" class="first" :src="item.src" alt />
               </div>
               <div>
-                <img v-if="index == materialKey - 1" style="max-width:100%;max-height:100%" class="second" :src="item" alt />
+                <img v-if="index == materialKey - 1" style="max-width:100%;max-height:100%" class="second" :src="item.src" alt />
               </div>
               <div>
-                <img v-if="index == materialKey" style="max-width:100%;max-height:100%" class="thrid" :src="item" alt />
+                <img v-if="index == materialKey" style="max-width:100%;max-height:100%" class="thrid" :src="item.src" alt />
               </div>
               <div>
-                <img v-if="index == materialKey + 1" style="max-width:100%;max-height:100%" class="fourth" :src="item" alt />
+                <img v-if="index == materialKey + 1" style="max-width:100%;max-height:100%" class="fourth" :src="item.src" alt />
               </div>
               <div>
-                <img v-if="index == materialKey + 2" style="max-width:100%;max-height:100%" class="fifth" :src="item" alt />
+                <img v-if="index == materialKey + 2" style="max-width:100%;max-height:100%" class="fifth" :src="item.src" alt />
               </div>
             </div>
             <!-- <div v-if="item.match(/((http|https):\/\/)/ig) && item.match(/((.jpg|.png|.gif|.webp))/ig)">
@@ -55,7 +55,7 @@
         </div> -->
 
         <div>
-          <img class :src="item" alt style="max-height:45vh" />
+          <img class :src="item.src" alt style="max-height:45vh" />
         </div>
         <!-- <div v-if="item.match(/((http|https):\/\/)/ig) && item.match(/((.jpg|.png|.gif|.webp))/ig)">
             <img class :src="item" alt style="max-height:45vh" />
@@ -89,15 +89,47 @@ export default {
     return {
       lastIndex: 0,
       showMaterial: true,
-      materialList: [
-        require("@/assets/img/home/cloud1.webp"),
-        require("@/assets/img/home/cloud2.webp"),
-        require("@/assets/img/home/cloud3.webp"),
-        require("@/assets/img/home/cloud4.webp"),
-        require("@/assets/img/home/cloud1.webp"),
-        require("@/assets/img/home/cloud2.webp"),
-        require("@/assets/img/home/cloud3.webp"),
-        require("@/assets/img/home/cloud4.webp")
+      materialList: [{
+          src:require("@/assets/img/technology/1.webp"),
+          title:'牛皮处理',
+          content:'做鼓的第一步是牛皮处理，又细分为浸泡和刨皮。最早的时候牛皮都是自己处理的，用石灰水溶液脱毛防蛀，现在则是使用从国外购进已经处理好的牛皮，再用水浸泡一夜使其软化。做鼓强调“一整张牛皮”——选用一整张的牛皮做鼓会使鼓面更加紧密，再用牛皮绷紧以后的声音才会更响，更浑厚。非遗传承人对我们说：“我们做过最大的鼓是现在在杭州灵隐寺的那面，直径有三米三多，用的也是一整张完整的牛皮，是不是‘一整张’声音完全不一样的。”'
+        },{
+          src:require("@/assets/img/technology/2.刨皮.webp"),
+          title:'牛皮处理',
+          content:'做鼓的第一步是牛皮处理，又细分为浸泡和刨皮。最早的时候牛皮都是自己处理的，用石灰水溶液脱毛防蛀，现在则是使用从国外购进已经处理好的牛皮，再用水浸泡一夜使其软化。做鼓强调“一整张牛皮”——选用一整张的牛皮做鼓会使鼓面更加紧密，再用牛皮绷紧以后的声音才会更响，更浑厚。非遗传承人对我们说：“我们做过最大的鼓是现在在杭州灵隐寺的那面，直径有三米三多，用的也是一整张完整的牛皮，是不是‘一整张’声音完全不一样的。”'
+        },{
+          src:require("@/assets/img/technology/3.据鼓板.webp"),
+          title:'牛皮处理',
+          content:'做鼓的第一步是牛皮处理，又细分为浸泡和刨皮。最早的时候牛皮都是自己处理的，用石灰水溶液脱毛防蛀，现在则是使用从国外购进已经处理好的牛皮，再用水浸泡一夜使其软化。做鼓强调“一整张牛皮”——选用一整张的牛皮做鼓会使鼓面更加紧密，再用牛皮绷紧以后的声音才会更响，更浑厚。非遗传承人对我们说：“我们做过最大的鼓是现在在杭州灵隐寺的那面，直径有三米三多，用的也是一整张完整的牛皮，是不是‘一整张’声音完全不一样的。”'
+        },{
+          src:require("@/assets/img/technology/4.盘绕+拼鼓板.webp"),
+          title:'牛皮处理',
+          content:'做鼓的第一步是牛皮处理，又细分为浸泡和刨皮。最早的时候牛皮都是自己处理的，用石灰水溶液脱毛防蛀，现在则是使用从国外购进已经处理好的牛皮，再用水浸泡一夜使其软化。做鼓强调“一整张牛皮”——选用一整张的牛皮做鼓会使鼓面更加紧密，再用牛皮绷紧以后的声音才会更响，更浑厚。非遗传承人对我们说：“我们做过最大的鼓是现在在杭州灵隐寺的那面，直径有三米三多，用的也是一整张完整的牛皮，是不是‘一整张’声音完全不一样的。”'
+        },{
+          src:require("@/assets/img/technology/5.拼鼓板.webp"),
+          title:'牛皮处理',
+          content:'做鼓的第一步是牛皮处理，又细分为浸泡和刨皮。最早的时候牛皮都是自己处理的，用石灰水溶液脱毛防蛀，现在则是使用从国外购进已经处理好的牛皮，再用水浸泡一夜使其软化。做鼓强调“一整张牛皮”——选用一整张的牛皮做鼓会使鼓面更加紧密，再用牛皮绷紧以后的声音才会更响，更浑厚。非遗传承人对我们说：“我们做过最大的鼓是现在在杭州灵隐寺的那面，直径有三米三多，用的也是一整张完整的牛皮，是不是‘一整张’声音完全不一样的。”'
+        },{
+          src:require("@/assets/img/technology/6.打磨.webp"),
+          title:'牛皮处理',
+          content:'做鼓的第一步是牛皮处理，又细分为浸泡和刨皮。最早的时候牛皮都是自己处理的，用石灰水溶液脱毛防蛀，现在则是使用从国外购进已经处理好的牛皮，再用水浸泡一夜使其软化。做鼓强调“一整张牛皮”——选用一整张的牛皮做鼓会使鼓面更加紧密，再用牛皮绷紧以后的声音才会更响，更浑厚。非遗传承人对我们说：“我们做过最大的鼓是现在在杭州灵隐寺的那面，直径有三米三多，用的也是一整张完整的牛皮，是不是‘一整张’声音完全不一样的。”'
+        },{
+          src:require("@/assets/img/technology/7.装鼓环.webp"),
+          title:'牛皮处理',
+          content:'做鼓的第一步是牛皮处理，又细分为浸泡和刨皮。最早的时候牛皮都是自己处理的，用石灰水溶液脱毛防蛀，现在则是使用从国外购进已经处理好的牛皮，再用水浸泡一夜使其软化。做鼓强调“一整张牛皮”——选用一整张的牛皮做鼓会使鼓面更加紧密，再用牛皮绷紧以后的声音才会更响，更浑厚。非遗传承人对我们说：“我们做过最大的鼓是现在在杭州灵隐寺的那面，直径有三米三多，用的也是一整张完整的牛皮，是不是‘一整张’声音完全不一样的。”'
+        },{
+          src:require("@/assets/img/technology/8.蒙皮绷制.webp"),
+          title:'牛皮处理',
+          content:'做鼓的第一步是牛皮处理，又细分为浸泡和刨皮。最早的时候牛皮都是自己处理的，用石灰水溶液脱毛防蛀，现在则是使用从国外购进已经处理好的牛皮，再用水浸泡一夜使其软化。做鼓强调“一整张牛皮”——选用一整张的牛皮做鼓会使鼓面更加紧密，再用牛皮绷紧以后的声音才会更响，更浑厚。非遗传承人对我们说：“我们做过最大的鼓是现在在杭州灵隐寺的那面，直径有三米三多，用的也是一整张完整的牛皮，是不是‘一整张’声音完全不一样的。”'
+        },{
+          src:require("@/assets/img/technology/9.1泡钉2.webp"),
+          title:'牛皮处理',
+          content:'做鼓的第一步是牛皮处理，又细分为浸泡和刨皮。最早的时候牛皮都是自己处理的，用石灰水溶液脱毛防蛀，现在则是使用从国外购进已经处理好的牛皮，再用水浸泡一夜使其软化。做鼓强调“一整张牛皮”——选用一整张的牛皮做鼓会使鼓面更加紧密，再用牛皮绷紧以后的声音才会更响，更浑厚。非遗传承人对我们说：“我们做过最大的鼓是现在在杭州灵隐寺的那面，直径有三米三多，用的也是一整张完整的牛皮，是不是‘一整张’声音完全不一样的。”'
+        },{
+          src:require("@/assets/img/technology/10.彩绘.webp"),
+          title:'牛皮处理',
+          content:'做鼓的第一步是牛皮处理，又细分为浸泡和刨皮。最早的时候牛皮都是自己处理的，用石灰水溶液脱毛防蛀，现在则是使用从国外购进已经处理好的牛皮，再用水浸泡一夜使其软化。做鼓强调“一整张牛皮”——选用一整张的牛皮做鼓会使鼓面更加紧密，再用牛皮绷紧以后的声音才会更响，更浑厚。非遗传承人对我们说：“我们做过最大的鼓是现在在杭州灵隐寺的那面，直径有三米三多，用的也是一整张完整的牛皮，是不是‘一整张’声音完全不一样的。”'
+        }
       ],
       materialKey: 0
     };

@@ -23,11 +23,6 @@ export default new Router({
       path: '/navbar',
       name: 'navbar',
       component: () => import('@/views/navbar.vue')
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: () => import('@/views/Home.vue')
     },{
       path: '/default',
       name: 'default',
@@ -77,15 +72,7 @@ export default new Router({
         name: 'personal',
         component: () => import('@/components/personal.vue')
       }]
-    },{
-      path: '/protrait',
-      name: 'protrait',
-      component: () => import('@/components/protrait.vue')
-    },{
-      path: '/test',
-      name: 'test',
-      component: () => import('@/components/test.vue')
-    },
+    }
     // {
     //   path:'/s/:name',
     //   name:'article',

@@ -53,6 +53,7 @@ export default {
           }
         })
         .then(res => {
+          console.log(res)
           if(res.data.status == 0){
             this.$store.state.token = res.data.data.token;
             alert("欢迎您");
