@@ -27,7 +27,7 @@
       </div>
     </div>
     <router-link to="/navbar">
-      <img src="~@/assets/img/home/btn-threeline.png" alt="" class="btn-threeline">
+      <img src="~@/assets/img/home/btn-threeline.webp" alt="" class="btn-threeline">
     </router-link>
     <img draggable="false" src="~@/assets/img/home/cloud1.webp" alt="" class="cloud1">
     <img draggable="false" src="~@/assets/img/home/cloud2.webp" alt="" class="cloud2">

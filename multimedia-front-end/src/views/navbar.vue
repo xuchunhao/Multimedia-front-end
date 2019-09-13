@@ -8,7 +8,7 @@
           </el-col>
         </el-row>
     <cloud/>
-    <img draggable="false" src="~@/assets/img/navbar/btn-close.png" alt="" class="btn-close">
+    <img draggable="false" src="~@/assets/img/navbar/btn-close.webp" alt="" class="btn-close">
   </div>
     </div>
   </transition>
