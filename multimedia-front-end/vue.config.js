@@ -4,6 +4,7 @@ module.exports = {
   outputDir: './myDist',
   devServer:{
     port:12580,
+    disableHostCheck: true,
     proxy:{
       '/api': {
         target: 'https://dmt.lcworkroom.cn'
