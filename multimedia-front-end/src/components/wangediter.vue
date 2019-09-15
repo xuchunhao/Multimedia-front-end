@@ -49,7 +49,7 @@ export default {
     },
     methods: {
       submit () {
-        console.log(this.editor.txt.text())
+        // console.log(this.editor.txt.text())
       }
     },
   }
