@@ -26,6 +26,27 @@
     
   }
 
+  .comment-content{
+    padding: 15px 0;
+		margin-top: 5px;
+    background: #eee;
+		border-radius: 3px;
+			&:hover {
+				cursor: pointer;
+				box-shadow: 1px 1px 10px #aaa;
+			}
+			div {
+        span{
+          color: #666;
+          border-bottom: 1px solid #666;
+        }
+				iframe{
+          height: 60px;
+          border: none;
+        }
+			}
+  }
+
   .window{
     >div{
       background: rgb(236, 234, 223);

@@ -14,14 +14,21 @@ var api = {
   login(params) {
     return axios.post('/api/user/login',params)
   },
-  getArticleList(params) {
-    // store.dispatch({
-    //   type: 'getCookie',
-    //   cname: 'token'
-    // });
+  addComment(params) {
     let token = this.getCookie('token');
-    // console.log(token,this)
-    return axios.get('api/get/article/list?token=' + token,params)
+    return axios.post('/api/comment?token=' + token,params)
+  },
+  getCommentList(params){
+    let token = this.getCookie('token');
+    return axios.post('/api/get/comment/list?token=' + token,params)
+  },
+  getArticleList(params) {
+    let token = this.getCookie('token');
+    return axios.get('api/get/article/list?token=' + token +'&mode=1',params)
+  },
+  getArticleListMore(params) {
+    let token = this.getCookie('token');
+    return axios.post('api/get/article/list?token=' + token,params)
   },
   getUserInfo(params) {
     let token = this.getCookie('token');
@@ -33,8 +40,19 @@ var api = {
   },
   changeInfo(params) {
     let token = this.getCookie('token');
-    console.log(token);
     return axios.post('/api/user/info?token=' + token,params)
+  },
+  addArticle(params) {
+    let token = this.getCookie('token');
+    return axios.post('/api/article?token=' + token ,params)
+  },
+  changeNickname(params) {
+    let token = this.getCookie('token');
+    return axios.post('/api/user/nickname?token=' + token,params)
+  },
+  getNickname(params){
+    let token = this.getCookie('token');
+    return axios.post('/api/user/nickname?token=' + token,params)
   },
   getCookie(cname) {
     var name = cname + '=';

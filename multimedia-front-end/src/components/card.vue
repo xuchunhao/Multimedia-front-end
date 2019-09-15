@@ -3,11 +3,11 @@
     <transition name="el-zoom-in-top">
       <ul v-show="show1" class="transition-box">
         <router-link to="introduce" tag="li">
-          <span>简 介</span>
+          <span>纵 览</span>
           <span>Brief Introduction</span>
         </router-link>
         <router-link to="technology" tag="li">
-          <span>工 艺 流 程</span>
+          <span>匠 心</span>
           <span>Technological Process</span>
         </router-link>
         <router-link to="source" tag="li">
@@ -15,17 +15,13 @@
           <span>Trace to the Source</span>
         </router-link>
         <router-link to="inherit" tag="li">
-          <span>文 化 传 承</span>
+          <span>薪 传</span>
           <span>Cultural Inheritance</span>
         </router-link>
         <router-link to="bbs" tag="li">
-          <span>游 客 论 坛</span>
+          <span>众 云</span>
           <span>Tourists BBS</span>
         </router-link>
-        <li>
-          <span>关 于 我 们</span>
-          <span>About Us</span>
-        </li>
       </ul>
     </transition>
 

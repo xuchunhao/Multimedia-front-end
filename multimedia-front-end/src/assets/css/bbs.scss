@@ -1,56 +1,127 @@
-.bbs{
-  .user{
-    div{
-      button{
-        float: right;
-      }
+.bbs {
+	.user {
+		div {
+			button {
+				float: right;
+				color: #fff;
+				background-color: rgb(165, 42, 26);
+				padding: 10px;
+				margin-right: 20px;
+				// margin-right: 50px;
+				font-size: 20px;
+				border: none;
+				// display: inline;
+				&:hover {
+					border: none;
+				}
+				&:focus {
+					border: none;
+				}
+			}
+		}
+  }
+  .bbs-top{
+    margin-bottom: 10px;
+  }
+	.bbs-content {
+		padding: 15px 0;
+		margin-top: 5px;
+    background: #eee;
+		border-radius: 3px;
+		.bbs-every {
+			position: relative;
+			padding: 20px;
+			&:hover {
+				cursor: pointer;
+				box-shadow: 1px 1px 10px #aaa;
+			}
+			img {
+				width: 80px;
+				height: 80px;
+        position: absolute;
+        border-radius: 50%;
+			}
+			div {
+        padding-left: 100px;
+        span{
+          color: #666;
+        }
+				p {
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+
+		// .btn-submit{
+		//   float: right;
+		//     color: #fff;
+		//     background-color: rgb(165, 42, 26);
+		//     padding: 10px 20px 10px;
+		//     // margin-right: 50px;
+		//     font-size: 20px;
+		//     border: none;
+		//     // display: inline;
+		//     &:hover{
+		//       border: none;
+		//     }
+		//     &:focus{
+		//       border: none;
+		//     }
+		// }
+	}
+
+	.window {
+    label{
+      font-size: 20px;
+      margin: 20px 0;
+    }
+		.foot {
+			display: flex;
+			justify-content: center;
+			button {
+				color: #fff;
+				background-color: rgb(165, 42, 26);
+				margin-top: 30px;
+				padding: 10px 40px 10px;
+				// margin-right: 50px;
+				font-size: 20px;
+        border: none;
+        margin-right: 10px;
+				// display: inline;
+				&:hover {
+					border: none;
+				}
+				&:focus {
+					border: none;
+				}
+			}
+		}
+  }
+  #wangeditor{
+    .w-e-text-container{
+      background-color: #fff;
     }
   }
-  .bbs-content{
-    padding: 20px 0;
-    margin-top: 10px;
-    border: 1px solid #aaa;
-    border-radius: 10px;
-    .bbs-every{
-      border-bottom: 1px solid #aaa;
-      position: relative;
-      padding: 20px;
-      &:hover{
-        cursor: pointer;
-        box-shadow: 1px 1px 10px #aaa;
-      }
-      img{
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        border: 1px solid black;
-      }
-      div{
-        padding-left: 100px;
-        p{
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-      }
-    }
-
-    .btn-submit{
-      color: black;
-      float: right;
+  .btn-wangediter{
+    color: #fff;
+      background-color: rgb(165, 42, 26);
       margin-top: 30px;
+      padding: 10px 40px 10px;
+      // margin-right: 50px;
+      font-size: 20px;
       border: none;
+      border-radius: 3px;
+      // display: inline;
+      cursor: pointer;
       &:hover{
-        background: white;
-        box-shadow: 1px 1px 10px #aaa;
+        border: none;
       }
       &:focus{
-        background: white;
-        box-shadow: 1px 1px 10px #aaa;
+        border: none;
       }
-    }
   }
-
 }
 
 // .info-delivery-content div .lost .lost-content {

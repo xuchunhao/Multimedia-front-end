@@ -1,7 +1,11 @@
 <template>
   <div id="wangeditor">
     <div ref="editorElem" style="text-align:left;"></div>
-    <button @click="submit">tijiao</button>
+    <!-- <el-row type="flex" justify="center">
+      <el-col :span="6">
+        <button type="primary" @click="submit" class="btn-wangediter">发布</button>
+      </el-col>
+    </el-row> -->
   </div>
 </template>
 <script>
@@ -19,10 +23,10 @@ export default {
   mounted() {
     this.editor = new E(this.$refs.editorElem);
     // 编辑器的事件，每次改变会获取其html内容
-    // this.editor.customConfig.onchange = html => {
-    //   this.editorContent = html;
-    //   this.catchData(this.editorContent); // 把这个html通过catchData的方法传入父组件
-    // };
+    this.editor.customConfig.onchange = html => {
+      this.editorContent = html;
+      this.catchData(this.editor.txt.html()); // 把这个html通过catchData的方法传入父组件
+    };
     this.editor.customConfig.menus = [
       // 菜单配置
       'head', // 标题
@@ -60,5 +64,21 @@ export default {
     .w-e-text-container{
       background-color: #fff;
     }
+  }
+  .btn-wangediter{
+    color: #fff;
+      background-color: rgb(165, 42, 26);
+      margin-top: 30px;
+      padding: 10px 40px 10px;
+      // margin-right: 50px;
+      font-size: 20px;
+      border: none;
+      // display: inline;
+      &:hover{
+        border: none;
+      }
+      &:focus{
+        border: none;
+      }
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="personal">
-    <el-row type="flex" justify="center">
+    <el-row type="flex" class="info">
       <el-col :span="10">
         <img
           class="porotrait-img"
@@ -8,11 +8,6 @@
           alt
         />
         <porotrait />
-      </el-col>
-      <el-col :span="14">2</el-col>
-    </el-row>
-    <el-row type="flex" justify="center" class="info">
-      <el-col :span="10">
         <el-row class="info-box" type="flex" justify="center">
           <el-col :span="12">
             <h1 v-if="!userInfo.nickname">暂无昵称</h1>
@@ -43,7 +38,34 @@
           </el-col>
         </el-row>
       </el-col>
-      <el-col :span="14">3</el-col>
+      <el-col :span="14">
+        <div
+          class="comment-content"
+          v-for="(comment,index) in sliceCommentList[currentPage - 1]"
+          :key="index"
+        >
+          <div class="comment-every">
+            <div>
+              <el-row>
+                <span>{{comment.title}}</span>
+              </el-row>
+              <el-row>
+                <iframe :srcdoc="comment.content"></iframe>
+              </el-row>
+            </div>
+          </div>
+        </div>
+        <el-row type="flex" justify="end" style="margin-top:15px">
+      <el-col :span="8">
+        <el-pagination
+          @current-change="currentChange"
+          layout="prev, pager, next"
+          :total="total * 10"
+        ></el-pagination>
+      </el-col>
+    </el-row>
+      </el-col>
+      
     </el-row>
     <el-dialog
       class="window"
@@ -99,7 +121,11 @@ export default {
   data() {
     return {
       userInfo: {},
-      dialogVisible: false
+      dialogVisible: false,
+      commentList: "",
+      sliceCommentList:[],
+      currentPage:1,
+      total:0
     };
   },
   mounted() {
@@ -107,28 +133,47 @@ export default {
       // console.log(res);
       this.userInfo = res.data.data;
     });
+    api
+      .getArticleListMore({
+        user_id: this.userInfo.phone,
+        mode:1
+      })
+      .then(res => {
+        this.commentList = res.data.data.list;
+        let chunk = 4; //每3个分一组
+        this.total = Math.ceil(this.commentList.length / chunk) ;
+        for (let i = 0, j = this.commentList.length; i < j; i += chunk) {
+          this.sliceCommentList.push(this.commentList.slice(i, i + chunk));
+        }
+        // console.log(this.commentList)
+      });
   },
   components: {
     porotrait
   },
   methods: {
+    currentChange(e) {
+      this.currentPage = e;
+    },
     handleClose() {
       this.dialogVisible = false;
     },
     change() {
-      api.changeInfo({
-        id: 0,
-        type: "info",
-        subtype: "update",
-        data: {
-          phone: this.userInfo.phone,
-          name: this.userInfo.name,
-          nickname: this.userInfo.nickname,
-          email: this.userInfo.email
-        }
-      }).then(res => {
-        this.$router.go(0)
-      })
+      api
+        .changeInfo({
+          id: 0,
+          type: "info",
+          subtype: "update",
+          data: {
+            phone: this.userInfo.phone,
+            name: this.userInfo.name,
+            nickname: this.userInfo.nickname,
+            email: this.userInfo.email
+          }
+        })
+        .then(res => {
+          this.$router.go(0);
+        });
     }
   }
 };
