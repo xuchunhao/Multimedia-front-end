@@ -48,8 +48,8 @@
           </el-col>
         </el-row>
         <el-row class="footerBtn" align="center">
-          <el-button type="primary" size="small" round @click="cut('blob')">确认</el-button>
-          <el-button type="primary" size="small" round @click="handleClose">取消</el-button>
+          <el-button class="btn-content" type="primary" size="small" round @click="cut('blob')">确认</el-button>
+          <el-button class="btn-content" type="primary" size="small" round @click="handleClose">取消</el-button>
         </el-row>
       </span>
     </el-dialog>
@@ -140,8 +140,8 @@ export default {
               "base64":res
               }
             }).then(res => {
-              console.log(res)
-              //this.$router.go(0)
+              // console.log(res)
+              this.$router.go(0)
             })
       });
     }
@@ -174,6 +174,12 @@ export default {
     left: 270px;
     top: 220px;
     font-size: 20px;
+    border: none;
+    background: #fff;
+  }
+  .btn-content{
+    background-color: rgb(165, 42, 26);
+    border: none;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template lang="zh-cn">
   <div id="app">
     <div id="spig" class="spig">
-      <div id="message">……</div>
+      <div id="message"></div>
       <div id="mumu" class="mumu"></div>
     </div>
     <!-- <div>

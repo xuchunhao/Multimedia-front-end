@@ -18,10 +18,6 @@
           <span>文 化 传 承</span>
           <span>Cultural Inheritance</span>
         </router-link>
-        <li>
-          <span>娱 乐 互 动</span>
-          <span>Entertainment</span>
-        </li>
         <router-link to="bbs" tag="li">
           <span>游 客 论 坛</span>
           <span>Tourists BBS</span>

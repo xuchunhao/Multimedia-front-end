@@ -54,17 +54,30 @@ export default {
       articleList :[],
     }
   },
+  methods: {
+    getCookie(cname) {
+			var name = cname + '=';
+      var ca = document.cookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+        var c = ca[i].trim();
+				if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+			}
+			return '';
+		}
+  },
   mounted () {
-    console.log(111)
-    if(this.$store.state.token == ''){
+    // console.log(this.getCookie('token'))
+    // this.getCookie('token')
+    // console.log(getCookie('token'))
+    if(this.getCookie('token') == ''){
       this.$router.push({path:'/login'})
     }
-    console.log(222)
-    console.log(this.$store.state.token)
+    // console.log(222)
+    // console.log(this.$store.state.token)
     api.getArticleList({
-
+      
     }).then(res => {
-      console.log(res)
+      // console.log(res)
       this.articleList = res.data.data.list;
     })
   }
