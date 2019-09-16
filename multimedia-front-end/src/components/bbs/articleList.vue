@@ -26,9 +26,9 @@
           <el-row>
             <span>{{comment.user_id}}</span>
           </el-row>
-        <el-row>
-          <iframe :srcdoc="comment.content"></iframe>
-        </el-row>
+          <el-row>
+            <iframe :srcdoc="comment.content"></iframe>
+          </el-row>
         </div>
       </div>
     </div>
@@ -51,8 +51,8 @@
       </el-row>
     </el-dialog>
     <el-row type="flex" justify="end">
-      <el-col :span="2">
-        <el-button @click="dialogVisible=true">发布评论</el-button>
+      <el-col :span="4">
+        <el-button class="finally" @click="dialogVisible=true">发布评论</el-button>
       </el-col>
     </el-row>
     <el-row type="flex" justify="end" style="margin-top:15px">
@@ -81,9 +81,9 @@ export default {
       dialogVisible: false,
       reply: "",
       commentList: "",
-      sliceCommentList:[],
-      currentPage:1,
-      total:0
+      sliceCommentList: [],
+      currentPage: 1,
+      total: 0
     };
   },
   methods: {
@@ -106,10 +106,12 @@ export default {
         })
         .then(res => {
           alert("添加成功");
+          this.$router.push({ path: "/bbs" });
         });
-    },currentChange(e) {
-      this.currentPage = e;
     },
+    currentChange(e) {
+      this.currentPage = e;
+    }
   },
   mounted() {
     this.item = this.$route.params.item;
@@ -123,6 +125,20 @@ export default {
         // console.log(res)
         this.articleInfo = res.data.data.list[0];
         // console.log(this.articleInfo)
+        api
+          .getCommentList({
+            article_id: this.item.article_id
+          })
+          .then(res => {
+            this.commentList = res.data.data.list;
+            // console.log(this.commentList)
+            let chunk = 3; //每3个分一组
+            this.total = Math.ceil(this.commentList.length / chunk) + 1;
+            for (let i = 0, j = this.commentList.length; i < j; i += chunk) {
+              this.sliceCommentList.push(this.commentList.slice(i, i + chunk));
+            }
+            // console.log(this.sliceCommentList)
+          });
       });
 
     api

@@ -6,11 +6,11 @@ jQuery(document).ready(function ($) {
             showMessage("秘密通道:<br />    <img src=\"http://pic.sc.chinaz.com/Files/pic/Listfaces/3646/02.gif\"/><br/>\
             <a href=\"#/index\" title=\"主页\">主页</a>\
             <a href=\"#/navbar\" title=\"导航栏\">导航栏</a>\
-            <a href=\"#/introduce\" title=\"简介\">简介</a>\
-            <a href=\"#/technology\" title=\"工艺流程\">工艺流程</a>\
+            <a href=\"#/introduce\" title=\"纵览\">纵览</a>\
+            <a href=\"#/technology\" title=\"匠心\">匠心</a>\
             <a href=\"#/source\" title=\"溯源\">溯源</a>\
-            <a href=\"#/inherit\" title=\"文化传承\">文化传承</a>\
-            <a href=\"#/bbs\" title=\"游客论坛\">游客论坛</a>\  ",10000);
+            <a href=\"#/inherit\" title=\"薪传\">薪传</a>\
+            <a href=\"#/bbs\" title=\"众芸\">众芸</a>\  ",10000);
 		}
 	});
 	$("#spig").bind("contextmenu", function(e) {
