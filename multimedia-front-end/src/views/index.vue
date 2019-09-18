@@ -18,9 +18,7 @@
         </div>
       </div>
     </div>
-    <router-link to="/navbar" id="main-navbar-button">
-      <img src="~@/assets/img/home/btn-threeline.webp" />
-    </router-link>
+    <router-link to="/navbar" id="main-navbar-button" />
   </div>
 </template>
 <script>

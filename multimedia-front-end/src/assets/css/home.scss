@@ -7,13 +7,20 @@
   background-image: url("~@/assets/img/home/background.webp");
 
   #main-navbar-button {
-    width: 1rem;
-    padding: 2rem;
+    width: 5vmin;
+    height: 5vmin;
+
+    min-width: 40px;
+    min-height: 40px;
 
     position: absolute;
     z-index: 3;
-    right: 2rem;
-    top: 0rem;
+    right: 5vmin;
+    top: 5vmin;
+
+    background-size: 100% auto;
+    background-image: url("~@/assets/img/home/btn-threeline.webp");
+    background-repeat: no-repeat;
   }
 
   #center-content {
