@@ -10,7 +10,9 @@
       </el-row>
       <el-row v-if="currentPage == 1" type="flex" class="iframe-index">
         <el-col :span="24">
-          <iframe :srcdoc="articleInfo.content" frameborder="0"></iframe>
+          <div v-html="articleInfo.content">
+
+          </div>
         </el-col>
       </el-row>
     </div>
@@ -19,7 +21,6 @@
       v-for="(comment,index) in sliceCommentList[currentPage-2]"
       :key="index"
     >
-      <!-- <img :src="'https://dmt.lcworkroom.cn/api/get/portrait/' + item.user_id" alt /> -->
       <div class="comment-every">
         <img :src="'https://dmt.lcworkroom.cn/api/get/portrait/' + comment.user_id" alt />
         <div>
@@ -27,7 +28,9 @@
             <span>{{comment.user_id}}</span>
           </el-row>
           <el-row>
-            <iframe :srcdoc="comment.content"></iframe>
+            <div v-html="comment.content" class="comment-every-list">
+
+            </div>
           </el-row>
         </div>
       </div>
@@ -50,11 +53,17 @@
         </el-col>
       </el-row>
     </el-dialog>
-    <el-row type="flex" justify="end">
+    <el-row type="flex" justify="end"  class="finally">
       <el-col :span="4">
-        <el-button class="finally" @click="dialogVisible=true">发布评论</el-button>
+        <el-button @click="dialogVisible=true">发布评论</el-button>
+      </el-col>
+      <el-col :span="4">
+        <router-link to="/bbs">
+          <el-button class="back-bbs">返回论坛</el-button>
+        </router-link>
       </el-col>
     </el-row>
+    
     <el-row type="flex" justify="end" style="margin-top:15px">
       <el-col :span="4">
         <el-pagination

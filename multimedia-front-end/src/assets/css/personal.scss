@@ -10,6 +10,24 @@
     }
   }
 
+  .back-bbs{
+    color: #fff;
+    background-color: rgb(165, 42, 26);
+    margin-top: 30px;
+    padding: 0px 15px;
+    // margin-right: 50px;
+    font-size: 20px;
+    border: none;
+    // display: inline;
+    &:hover{
+      border: none;
+    }
+    &:focus{
+      border: none;
+    }
+    
+  }
+
   .info{
     span{
       font-size: 20px;
@@ -40,7 +58,7 @@
           color: #666;
           border-bottom: 1px solid #666;
         }
-				iframe{
+				.personal-comment{
           height: 60px;
           border: none;
         }

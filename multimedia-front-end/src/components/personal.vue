@@ -39,6 +39,13 @@
         </el-row>
       </el-col>
       <el-col :span="14">
+        <el-row type="flex" justify="end">
+          <el-col :span="4">
+            <router-link to="/bbs">
+              <el-button class="back-bbs">返回论坛</el-button>
+            </router-link>
+          </el-col>
+        </el-row>
         <div
           class="comment-content"
           v-for="(comment,index) in sliceCommentList[currentPage - 1]"
@@ -50,7 +57,9 @@
                 <span>{{comment.title}}</span>
               </el-row>
               <el-row>
-                <iframe :srcdoc="comment.content"></iframe>
+                <div v-html="comment.content" class="personal-comment">
+
+                </div>
               </el-row>
             </div>
           </div>
