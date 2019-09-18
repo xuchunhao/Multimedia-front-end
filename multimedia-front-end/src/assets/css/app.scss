@@ -16,19 +16,13 @@ body,
 }
 
 @media (orientation: landscape) {
-  $landscape-min-height: 500px;
   #canvas {
     max-width: 230vh;
-    min-height: $landscape-min-height;
-    min-width: calc(#{$landscape-min-height} * 2.3);
   }
 }
 
 @media (orientation: portrait) {
-  $portrait-min-height: 250px;
   #canvas {
-    max-height: 220vw;
-    min-width: $portrait-min-height;
-    min-height: calc(#{$portrait-min-height} * 2.2);
+    max-height: 230vw;
   }
 }
