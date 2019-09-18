@@ -9,7 +9,7 @@
         </el-row>
     <cloud/>
     <router-link to="/index">
-      <img draggable="false" src="~@/assets/img/navbar/btn-close.png" alt="" class="btn-close">
+      <img draggable="false" src="~@/assets/img/navbar/btn-close.webp" alt="" class="btn-close">
     </router-link>
   </div>
     </div>
