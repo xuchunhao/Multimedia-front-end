@@ -1,13 +1,12 @@
 <template>
   <div id="content-background">
-    <div id="decoration_cloud_container">
+    <div id="content">
+      <div id="decoration_cloud_container">
         <img id="decoration_cloud_1" src="~@/assets/img/home/cloud1.webp" />
         <img id="decoration_cloud_2" src="~@/assets/img/home/cloud2.webp" />
         <img id="decoration_cloud_3" src="~@/assets/img/home/cloud3.webp" />
         <img id="decoration_cloud_4" src="~@/assets/img/home/cloud4.webp" />
       </div>
-    <div id="content">
-      
       <div id="center-content">
         <div id="content-title">
           <img src="~@/assets/img/home/title.webp" alt id="title" draggable="false" />
