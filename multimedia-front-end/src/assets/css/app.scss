@@ -1,0 +1,33 @@
+html,body, #app {
+    width: 100%;
+    height: 100%;
+}
+
+#canvas {
+    #app {
+        width: 100%;
+        height: 100%;;
+    }
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (orientation: landscape) {
+    max-width: 220vh;
+  }
+
+  @media (orientation: portrait) {
+    max-height: 220vw;
+    min-height: 300px;
+  }
+
+  @media (orientation: landscape) and (max-height: 700px) {
+    height: 700px;
+    width: 15400px;
+  }
+
+  @media (orientation: portrait) and (max-width: 300px) {
+      width: 300px;
+      height: 660px;
+  }
+}
