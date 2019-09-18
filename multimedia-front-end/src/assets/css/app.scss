@@ -25,7 +25,7 @@ body,
 }
 
 @media (orientation: portrait) {
-  $portrait-min-height: 300px;
+  $portrait-min-height: 250px;
   #canvas {
     max-height: 220vw;
     min-width: $portrait-min-height;

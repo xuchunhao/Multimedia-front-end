@@ -7,8 +7,8 @@
         <img id="decoration-cloud-3" src="~@/assets/img/home/cloud3.webp" />
         <img id="decoration-cloud-4" src="~@/assets/img/home/cloud4.webp" />
       </div>
-      <div id="footer" />
-      <div id="main-object-container">
+      <div id="main-footer" />
+      <div id="main-text">
         <div id="main-title">
           <img src="~@/assets/img/home/title.webp" alt id="title" draggable="false" />
           <img src="~@/assets/img/home/seal.webp" alt id="seal" draggable="false" />
@@ -18,9 +18,11 @@
         </div>
       </div>
     </div>
+    <router-link to="/navbar" id="main-navbar-button">
+      <img src="~@/assets/img/home/btn-threeline.webp" />
+    </router-link>
   </div>
 </template>
-
 <script>
 export default {
   name: "home",
