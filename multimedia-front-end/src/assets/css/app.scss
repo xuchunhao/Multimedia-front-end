@@ -13,23 +13,22 @@ body,
   height: 100%;
   width: 100%;
   margin: 0 auto;
+}
 
-  @media (orientation: landscape) {
-    max-width: 220vh;
+@media (orientation: landscape) {
+  $landscape-min-height: 500px;
+  #canvas {
+    max-width: 230vh;
+    min-height: $landscape-min-height;
+    min-width: calc(#{$landscape-min-height} * 2.3);
   }
+}
 
-  @media (orientation: portrait) {
+@media (orientation: portrait) {
+  $portrait-min-height: 300px;
+  #canvas {
     max-height: 220vw;
-    min-height: 300px;
-  }
-
-  @media (orientation: landscape) and (max-height: 700px) {
-    height: 700px;
-    max-width: 1540px;
-  }
-
-  @media (orientation: portrait) and (max-width: 300px) {
-    width: 300px;
-    max-height: 660px;
+    min-width: $portrait-min-height;
+    min-height: calc(#{$portrait-min-height} * 2.2);
   }
 }
