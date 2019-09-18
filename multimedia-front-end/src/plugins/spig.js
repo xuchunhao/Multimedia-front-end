@@ -4,14 +4,13 @@ jQuery(document).ready(function ($) {
     $("#spig").mousedown(function (e) {
         if(e.which==3){
             showMessage("秘密通道:<br />    <img src=\"http://pic.sc.chinaz.com/Files/pic/Listfaces/3646/02.gif\"/><br/>\
-            <a href=\"#/home\" title=\"主页\">主页</a>\
-            <a href=\"#/introduce\" title=\"简介\">简介</a>\
-            <a href=\"#/technology\" title=\"工艺流程\">工艺流程</a>\
+            <a href=\"#/index\" title=\"主页\">主页</a>\
+            <a href=\"#/navbar\" title=\"导航栏\">导航栏</a>\
+            <a href=\"#/introduce\" title=\"纵览\">纵览</a>\
+            <a href=\"#/technology\" title=\"匠心\">匠心</a>\
             <a href=\"#/source\" title=\"溯源\">溯源</a>\
-            <a href=\"#/inherit\" title=\"文化传承\">文化传承</a>\
-            <a href=\"#/introduce\" title=\"简介\">简介</a>\
-            <a href=\"#/introduce\" title=\"简介\">简介</a>\
-            <a href=\"#/introduce\" title=\"简介\">简介</a>\  ",10000);
+            <a href=\"#/inherit\" title=\"薪传\">薪传</a>\
+            <a href=\"#/bbs\" title=\"众芸\">众芸</a>\  ",10000);
 		}
 	});
 	$("#spig").bind("contextmenu", function(e) {
@@ -31,7 +30,7 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
     $(".mumu").mouseover(function () {
        $(".mumu").fadeTo("300", 0.3);
-       msgs = ["我隐身了，你看不到我", "我会隐身哦！嘿嘿！", "别动手动脚的，把手拿开！", "把手拿开我才出来！"];
+       msgs = ["点点我，我可以告诉你一些小知识哦~"];
        var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i]);
     });
@@ -45,23 +44,36 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
 	var url = window.location.href;
     var title = document.title;
-    if (url.indexOf('/p/') < 0) { //如果是主页
-        var now = (new Date()).getHours();
-        if (now > 0 && now <= 6) {
-            showMessage(visitor + ' 你是夜猫子呀？还不睡觉，明天起的来么你？', 6000);
-        } else if (now > 6 && now <= 11) {
-            showMessage(visitor + ' 早上好，早起的鸟儿有虫吃噢！早起的虫儿被鸟吃，你是鸟儿还是虫儿？嘻嘻！', 6000);
-        } else if (now > 11 && now <= 14) {
-            showMessage(visitor + ' 中午了，吃饭了么？不要饿着了，饿死了谁来挺我呀！', 6000);
-        } else if (now > 14 && now <= 18) {
-            showMessage(visitor + ' 中午的时光真难熬！还好有你在！', 6000);
-        } else {
-            showMessage(visitor + ' 快来逗我玩吧！', 6000);
-        }
+    if (url.indexOf('/index') >= 0) { //如果是主页
+        showMessage('欢迎前来参观', 6000);
+        // var now = (new Date()).getHours();
+        // if (now > 0 && now <= 6) {
+        //     showMessage(visitor + ' 你是夜猫子呀？还不睡觉，明天起的来么你？', 6000);
+        // } else if (now > 6 && now <= 11) {
+        //     showMessage(visitor + ' 早上好，早起的鸟儿有虫吃噢！早起的虫儿被鸟吃，你是鸟儿还是虫儿？嘻嘻！', 6000);
+        // } else if (now > 11 && now <= 14) {
+        //     showMessage(visitor + ' 中午了，吃饭了么？不要饿着了，饿死了谁来挺我呀！', 6000);
+        // } else if (now > 14 && now <= 18) {
+        //     showMessage(visitor + ' 中午的时光真难熬！还好有你在！', 6000);
+        // } else {
+        //     showMessage(visitor + ' 快来逗我玩吧！', 6000);
+        // }
+    }else if (url.indexOf('/introduce') >= 0){
+        showMessage('简介的第2、3页是各种类的鼓的展示哦', 6000);
+    }else if (url.indexOf('/bbs') >= 0){
+        showMessage('阁下请先登录账号哦', 6000);
+    }else if (url.indexOf('/source') >= 0){
+        showMessage('这里展示了枧桥鼓的兴衰历程', 6000);
+    }else if (url.indexOf('/login') >= 0){
+        showMessage('阁下请先登录账号哦', 6000);
+    }else if (url.indexOf('/bbs') >= 0){
+        showMessage('欢迎阁下来到游客论坛，在这里你可以与其他小伙伴们多多交流呢', 6000);
+    }else if (url.indexOf('/about') >= 0){
+        showMessage('我们是五小灵童组合！', 6000);
     }
-    else {
-        showMessage('欢迎' + visitor + '来到《' + title + '》', 6000);
-    }
+    // else {
+    //     showMessage('欢迎' + visitor + '来到《' + title + '》', 6000);
+    // }
     $(".spig").animate({
         top: $(".spig").offset().top + 300,
         left: document.body.offsetWidth - 185
@@ -201,19 +213,27 @@ jQuery(document).ready(function ($) {
 
 //鼠标点击时
 jQuery(document).ready(function ($) {
-    var stat_click = 0;
+    // var stat_click = 0;
     $(".mumu").click(function () {
         if (!ismove) {
-            stat_click++;
-            if (stat_click > 4) {
-                msgs = ["你有完没完呀？", "你已经摸我" + stat_click + "次了", "非礼呀！救命！OH，My ladygaga"];
+            // stat_click++;
+            // if (stat_click > 4) {
+                msgs = ["枧桥鼓制作技艺在2007年6月成为第二批浙江省非物质文化遗产名录", 
+                "枧桥鼓的种类有很多，有平面鼓、牙鼓、手鼓、腰鼓、货郎鼓、战鼓、大鼓、排鼓等十多种",
+                "枧桥鼓主要以大鼓为主，最大的直径有3.35米、高2.65米",
+                "枧桥鼓传统制作工艺繁琐、周期长，一般一只大鼓需耗时6—7个月",
+                "枧桥鼓肇始于唐代，在明清发展到顶峰，如今渐微",
+                "2005年12月，中央电视台国际频道《华夏文明》栏目向全世界各国播放临海枧桥董村的制鼓工艺流程和各大特色大鼓，让更多的人了解历史文化名城临海",
+                "枧桥鼓发展至今，已是第五代传承人，分别是董继光、董显跃、谢哲长",
+                "做鼓有个俗话，“皮有多大，鼓就有多大“，所以皮的大小决定了鼓的大小",
+                "一个鼓的制作周期要经历：牛皮处理、刨皮、锯鼓板、盘绕、拼鼓板、打磨、装鼓环、蒙皮绷制、钉泡钉、切皮上漆等十个步骤"];
                 var i = Math.floor(Math.random() * msgs.length);
                 //showMessage(msgs[i]);
-            } else {
-                msgs = ["筋斗云！~我飞！", "我跑呀跑呀跑！~~", "别摸我，大男人，有什么好摸的！", "惹不起你，我还躲不起你么？", "不要摸我了，我会告诉老婆来打你的！", "干嘛动我呀！小心我咬你！"];
-                var i = Math.floor(Math.random() * msgs.length);
-                //showMessage(msgs[i]);
-            }
+            // } else {
+            //     msgs = ["筋斗云！~我飞！", "我跑呀跑呀跑！~~", "别摸我，大男人，有什么好摸的！", "惹不起你，我还躲不起你么？", "不要摸我了，我会告诉老婆来打你的！", "干嘛动我呀！小心我咬你！"];
+            //     var i = Math.floor(Math.random() * msgs.length);
+            //     //showMessage(msgs[i]);
+            // }
         s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7,0.75,-0.1, -0.2, -0.3, -0.4, -0.5, -0.6,-0.7,-0.75];
         var i1 = Math.floor(Math.random() * s.length);
         var i2 = Math.floor(Math.random() * s.length);

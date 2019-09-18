@@ -1,6 +1,6 @@
 <template>
   <div class="inherit-people">
-    <el-timeline :reverse="reverse">
+    <el-timeline>
       <el-timeline-item>
         <h1>第一代</h1>
         <p>董昌松（生卒年失）</p>

@@ -8,7 +8,9 @@
           </el-col>
         </el-row>
     <cloud/>
-    <img draggable="false" src="~@/assets/img/navbar/btn-close.png" alt="" class="btn-close">
+    <router-link to="/index">
+      <img draggable="false" src="~@/assets/img/navbar/btn-close.png" alt="" class="btn-close">
+    </router-link>
   </div>
     </div>
   </transition>

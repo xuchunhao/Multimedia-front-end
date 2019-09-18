@@ -1,7 +1,7 @@
 <template lang="zh-cn">
   <div id="app">
     <div id="spig" class="spig">
-      <div id="message">……</div>
+      <div id="message"></div>
       <div id="mumu" class="mumu"></div>
     </div>
     <!-- <div>
@@ -20,36 +20,10 @@ export default {
   name: 'app',
   data () {
     return {
-      visitor:'帅哥',
       title:'',
       isindex:true
     }
   },
-  beforeCreate () {
-    // var isindex=true;
-    // var title="";
-    // var visitor="这位怪蜀黍";
-  },
-  mounted () {
-    // var isindex=true;
-    // var title="";
-    // var visitor="这位怪蜀黍";
-  },
-  created () {
-    // setTimeout(() => {
-    //   window.L2Dwidget.init({
-    //     pluginRootPath: './plugins/live2dw/',
-    //     pluginJsPath: 'lib/',
-    //     pluginModelPath: 'live2d-widget-model-koharu/assets/',
-    //     tagMode: false,
-    //     debug: false,
-    //     model: { jsonPath: './plugins/live2dw/live2d-widget-model-koharu/assets/koharu.model.json' },
-    //     display: { position: 'left', width: 150, height: 300 },
-    //     mobile: { show: true },
-    //     log: false
-    //   })
-    // }, 1000)
-  }
 }
 </script>
 

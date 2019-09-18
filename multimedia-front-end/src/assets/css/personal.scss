@@ -1,0 +1,127 @@
+.personal{
+  .el-col{
+    // border: 1px solid black;
+    text-align: center;
+    position: relative;
+    .porotrait-img{
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  .back-bbs{
+    color: #fff;
+    background-color: rgb(165, 42, 26);
+    margin-top: 30px;
+    padding: 0px 15px;
+    // margin-right: 50px;
+    font-size: 20px;
+    border: none;
+    // display: inline;
+    &:hover{
+      border: none;
+    }
+    &:focus{
+      border: none;
+    }
+    
+  }
+
+  .info{
+    span{
+      font-size: 20px;
+      line-height: 40px;
+      &.change-info{
+        text-decoration: underline;
+        color: rgb(165, 42, 26);
+        cursor: pointer;
+      }
+      .info-box{
+        padding: 40px;
+      }
+    }
+    
+  }
+
+  .comment-content{
+    padding: 15px 0;
+		margin-top: 5px;
+    background: #eee;
+		border-radius: 3px;
+			&:hover {
+				cursor: pointer;
+				box-shadow: 1px 1px 10px #aaa;
+			}
+			div {
+        span{
+          color: #666;
+          border-bottom: 1px solid #666;
+        }
+				.personal-comment{
+          height: 60px;
+          border: none;
+        }
+			}
+  }
+
+  .window{
+    >div{
+      background: rgb(236, 234, 223);
+    }
+    label{
+      font-size: 20px;
+      line-height: 36px;
+      color: rgb(165, 42, 26);
+      // height: 20px;
+      // vertical-align: center;
+    }
+    input{
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid rgb(165, 42, 26);
+      font-size: 16px;
+      &::placeholder{
+        color: rgb(165, 42, 26);
+      }
+      // margin-top: 20px;
+    }
+    // button{
+    //   color: #fff;
+    //   background-color: rgb(165, 42, 26);
+    //   margin-top: 30px;
+    //   padding: 10px 40px 10px;
+    //   // margin-right: 50px;
+    //   font-size: 20px;
+    //   border: none;
+    //   // display: inline;
+    //   &:hover{
+    //     border: none;
+    //   }
+    //   &:focus{
+    //     border: none;
+    //   }
+    // }
+    // background: rgb(236, 234, 223);
+  }
+  .foot {
+    display: flex;
+    justify-content: center;
+    button{
+      color: #fff;
+      background-color: rgb(165, 42, 26);
+      margin-top: 30px;
+      padding: 10px 40px 10px;
+      // margin-right: 50px;
+      font-size: 20px;
+      border: none;
+      // display: inline;
+      &:hover{
+        border: none;
+      }
+      &:focus{
+        border: none;
+      }
+    }
+  }
+}

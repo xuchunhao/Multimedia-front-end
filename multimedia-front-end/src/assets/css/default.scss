@@ -35,9 +35,14 @@ body,
     top: 60px;
   }
   .btn-return{
+    background: url('~@/assets/img/default/btn-return.webp');
     position: absolute;
     right: 120px;
     top: 60px;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    z-index: 10000;
   }
 }
 

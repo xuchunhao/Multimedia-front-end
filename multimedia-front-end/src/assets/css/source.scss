@@ -1,62 +1,65 @@
 .source {
 	.time-line {
-		height: 38px;
-		border-bottom: 1px dashed #aaa;
+		height: 40px;
+		border-bottom: 30px solid rgb(165, 42, 26);
 
 		> div {
 			position: absolute;
 		}
 
 		.first {
-			left: 400px;
+			left: 300px;
 		}
 
 		.tang {
-			left: 620px;
+			left: 600px;
 		}
 
 		.ming {
-			left: 840px;
+			left: 900px;
 		}
 
 		.qing {
-			left: 1060px;
+			left: 1200px;
 		}
 
 		.jin {
-			left: 1280px;
+			left: 1480px;
 		}
 		.img1 {
-			background-image: url('~@/assets/img/source/小人1.0.webp');
-			width: 80px;
-			height: 80px;
-			border-radius: 50%;
+			background-image: url('~@/assets/img/source/小人1.3.webp');
+			width: 200px;
+			height: 150px;
+			// border-radius: 50%;
 			background-size: 100% 100%;
 			background-repeat: no-repeat;
 		}
 		.img2 {
-			background-image: url('~@/assets/img/source/小人2.0.webp');
-			width: 80px;
-			height: 80px;
-			border-radius: 50%;
+			background-image: url('~@/assets/img/source/小人2.3.webp');
+			width: 200px;
+			height: 150px;
+			// border-radius: 50%;
 			background-size: 100% 100%;
 			background-repeat: no-repeat;
 		}
 		button {
+			font-family: 'lishu';
 			text-align: center;
-			color: black;
-			width: 80px;
-			height: 80px;
+			color: #fff;
+			width: 120px;
+			height: 120px;
 			border-radius: 50%;
 			border: none;
-			&:hover {
-				background: white;
-				box-shadow: 1px 1px 10px #aaa;
-			}
-			&:focus {
-				background: white;
-				box-shadow: 1px 1px 10px #aaa;
-			}
+			font-size: 50px;
+			background: rgb(165, 42, 26);
+			// &:hover {
+			// 	background: rgb(165, 42, 26);
+			// 	box-shadow: 1px 1px 10px #aaa;
+			// }
+			// &:focus {
+			// 	background: rgb(165, 42, 26);
+			// 	box-shadow: 1px 1px 10px #aaa;
+			// }
     }
   }
   .dynasty-content{
@@ -74,7 +77,9 @@
         padding: 20px;
         line-height: 30px;
         .transition-box{
-          border: 1px solid black;
+					font-size: 30px;
+					line-height: 50px;
+          // border: 1px solid black;
         }
       }
     }
