@@ -2,8 +2,8 @@
   <div
     id="floating-content"
     v-bind:style="{left: elementX + 'px', top: elementY + 'px'}"
-    v-on:mousedown="onPressed">
-  </div>
+    v-on:mousedown="onPressed"
+  ></div>
 </template>
 
 <script>
@@ -44,6 +44,9 @@ export default {
         this.elementX = this.baseElementX + event.pageX - this.userPressedX;
         this.elementY = this.baseElementY + event.pageY - this.userPressedY;
       }
+    },
+    onResize: function(event) {
+      console.log("Resize")
     }
   },
   mounted: function() {
