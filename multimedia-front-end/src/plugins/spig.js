@@ -3,16 +3,39 @@ var visitor = '阁下';
 jQuery(document).ready(function ($) {
     $("#spig").mousedown(function (e) {
         if(e.which==3){
-            showMessage("秘密通道:<br />    <img src=\"http://pic.sc.chinaz.com/Files/pic/Listfaces/3646/02.gif\"/><br/>\
-            <a href=\"#/index\" title=\"主页\">主页</a>\
-            <a href=\"#/navbar\" title=\"导航栏\">导航栏</a>\
-            <a href=\"#/introduce\" title=\"纵览\">纵览</a>\
-            <a href=\"#/technology\" title=\"匠心\">匠心</a>\
-            <a href=\"#/source\" title=\"溯源\">溯源</a>\
-            <a href=\"#/inherit\" title=\"薪传\">薪传</a>\
-            <a href=\"#/bbs\" title=\"众芸\">众芸</a>\  ",10000);
+            // showMessage("秘密通道:<br />    <img src=\"http://pic.sc.chinaz.com/Files/pic/Listfaces/3646/02.gif\"/><br/>\
+            // <a href=\"#/index\" title=\"主页\">主页</a>\
+            // <a href=\"#/navbar\" title=\"导航栏\">导航栏</a>\
+            // <a href=\"#/introduce\" title=\"纵览\">纵览</a>\
+            // <a href=\"#/technology\" title=\"匠心\">匠心</a>\
+            // <a href=\"#/source\" title=\"溯源\">溯源</a>\
+            // <a href=\"#/inherit\" title=\"薪传\">薪传</a>\
+            // <a href=\"#/bbs\" title=\"众芸\">众芸</a>\  "
+            showMessage("<a class=\"big-logo\" href=\"#/index\" title=\"首页\">首页</a>\
+            <a class=\"big-logo\" href=\"#/navbar\" title=\"导航栏\">导航栏</a>\
+            <a class=\"big-logo fl pages-btn\" title=\"详情\">详情</a>\
+            <div class=\"fl pages\">\
+                <a class=\"small-logo\" href=\"#/introduce\" title=\"纵览\">纵览</a>\
+                <a class=\"small-logo\" href=\"#/technology\" title=\"匠心\">匠心</a>\
+                <a class=\"small-logo\" href=\"#/source\" title=\"溯源\">溯源</a>\
+                <a class=\"small-logo\" href=\"#/inherit\" title=\"薪传\">薪传</a>\
+                <a class=\"small-logo\" href=\"#/bbs\" title=\"众芸\">众芸</a>\
+            <div/>"
+            ,10000);
+            // let isShow = false;
+            // if(!isShow){
+                $('.pages-btn').click(function(e) {
+                    $('.pages').fadeIn(1000);
+                    // isShow = false;
+                })
+            // }else{
+                // $('.pages-btn').click(function(e) {
+                //     $('.pages').fadeOut(1000);
+                //     isShow = true;
+                // })
+            // }
 		}
-	});
+    });
 	$("#spig").bind("contextmenu", function(e) {
 	    return false;
 	});
@@ -21,16 +44,16 @@ jQuery(document).ready(function ($) {
 //鼠标在消息上时
 jQuery(document).ready(function ($) {
     $("#message").hover(function () {
-       $("#message").fadeTo("100", 1);
-     });
+        $("#message").fadeTo("100", 1);
+    });
 });
 
 
 //鼠标在上方时
 jQuery(document).ready(function ($) {
     $(".mumu").mouseover(function () {
-       $(".mumu").fadeTo("300", 0.3);
-       msgs = ["点点我，我可以告诉你一些小知识哦~"];
+        $(".mumu").fadeTo("300", 0.3);
+        msgs = ["点点我，我可以告诉你一些小知识哦~"];
        var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i]);
     });
@@ -76,7 +99,7 @@ jQuery(document).ready(function ($) {
     // }
     $(".spig").animate({
         top: $(".spig").offset().top + 300,
-        left: document.body.offsetWidth - 185
+        left: document.body.offsetWidth - (document.body.offsetWidth / 2)
     },
     {
         queue: false,
@@ -89,41 +112,41 @@ jQuery(document).ready(function ($) {
 });
 
 //鼠标在某些元素上方时
-jQuery(document).ready(function ($) {
-    $('h2 a').click(function () {//标题被点击时
-        showMessage('萌萌地加载《<span style="color:#0099cc;">' + $(this).text() + '</span>》中，请稍候');
-    });
-    $('h2 a').mouseover(function () {
-        showMessage('要看看《<span style="color:#0099cc;">' + $(this).text() + '</span>》这篇随笔么？');
-    });
-    $('li a').mouseover(function () {
-        showMessage('去 <span style="color:#0099cc;">' + $(this).text() + '</span> 逛逛');
-    });
-    $('.tbCommentBody').mouseover(function () {
-        showMessage('<span style="color:#0099cc;">' + visitor + '</span> 向评论栏出发吧！');
-    });
-    $('#btn_comment_submit').mouseover(function () {
-        showMessage('确认提交了么？');
-    });
-    $('#q').focus(function () {
-        showMessage('输入你想搜索的关键词再按Enter(回车)键就可以搜索啦!');
-    });
-});
+// jQuery(document).ready(function ($) {
+//     $('h2 a').click(function () {//标题被点击时
+//         showMessage('萌萌地加载《<span style="color:#0099cc;">' + $(this).text() + '</span>》中，请稍候');
+//     });
+//     $('h2 a').mouseover(function () {
+//         showMessage('要看看《<span style="color:#0099cc;">' + $(this).text() + '</span>》这篇随笔么？');
+//     });
+//     $('li a').mouseover(function () {
+//         showMessage('去 <span style="color:#0099cc;">' + $(this).text() + '</span> 逛逛');
+//     });
+//     $('.tbCommentBody').mouseover(function () {
+//         showMessage('<span style="color:#0099cc;">' + visitor + '</span> 向评论栏出发吧！');
+//     });
+//     $('#btn_comment_submit').mouseover(function () {
+//         showMessage('确认提交了么？');
+//     });
+//     $('#q').focus(function () {
+//         showMessage('输入你想搜索的关键词再按Enter(回车)键就可以搜索啦!');
+//     });
+// });
 
 
 //无聊讲点什么
-jQuery(document).ready(function ($) {
+// jQuery(document).ready(function ($) {
 
-    window.setInterval(function () {
-       // msgs = [ "陪我聊天吧！", "好无聊哦，你都不陪我玩！", "…@……!………", "^%#&*!@*(&#)(!)(", "我可爱吧！嘻嘻!~^_^!~~","谁淫荡呀?~谁淫荡?，你淫荡呀!~~你淫荡！~~","从前有座山，山上有座庙，庙里有个老和尚给小和尚讲故事，讲：“从前有座……”"];
-       // msgs = ["<iframe src=\"http://api.lwl12.com/hitokoto\"frameborder=\"0\" scrolling=\"no\" id=\"test\" onload=\"this.height=50\"  width=\"130px\" allowtransparency=\"true\" ></iframe>"];
-        //if(weather.state)msgs.push(weather.c[0],weather.c[2]);
-        //msgs = [weather.c[0],weather.c[2],"<iframe src=\"http://api.myhloli.com/hitokoto/\" frameborder=\"0\" scrolling=\"no\" id=\"external-frame\"  height=\"70px\" width=\"150px\" allowtransparency=\"true\" ></iframe>","<iframe src=\"http://api.myhloli.com/hitokoto/\" frameborder=\"0\" scrolling=\"no\" id=\"external-frame\"  height=\"70px\" width=\"150px\" allowtransparency=\"true\" ></iframe>","<iframe src=\"http://api.myhloli.com/hitokoto/\" frameborder=\"0\" scrolling=\"no\" id=\"external-frame\"  height=\"70px\" width=\"150px\" allowtransparency=\"true\" ></iframe>"];
-        msgs = [$("#hitokoto").text()];
-        var i = Math.floor(Math.random() * msgs.length);
-        showMessage(msgs[i], 8000);
-    }, 15000);
-});
+//     window.setInterval(function () {
+//        // msgs = [ "陪我聊天吧！", "好无聊哦，你都不陪我玩！", "…@……!………", "^%#&*!@*(&#)(!)(", "我可爱吧！嘻嘻!~^_^!~~","谁淫荡呀?~谁淫荡?，你淫荡呀!~~你淫荡！~~","从前有座山，山上有座庙，庙里有个老和尚给小和尚讲故事，讲：“从前有座……”"];
+//        // msgs = ["<iframe src=\"http://api.lwl12.com/hitokoto\"frameborder=\"0\" scrolling=\"no\" id=\"test\" onload=\"this.height=50\"  width=\"130px\" allowtransparency=\"true\" ></iframe>"];
+//         //if(weather.state)msgs.push(weather.c[0],weather.c[2]);
+//         //msgs = [weather.c[0],weather.c[2],"<iframe src=\"http://api.myhloli.com/hitokoto/\" frameborder=\"0\" scrolling=\"no\" id=\"external-frame\"  height=\"70px\" width=\"150px\" allowtransparency=\"true\" ></iframe>","<iframe src=\"http://api.myhloli.com/hitokoto/\" frameborder=\"0\" scrolling=\"no\" id=\"external-frame\"  height=\"70px\" width=\"150px\" allowtransparency=\"true\" ></iframe>","<iframe src=\"http://api.myhloli.com/hitokoto/\" frameborder=\"0\" scrolling=\"no\" id=\"external-frame\"  height=\"70px\" width=\"150px\" allowtransparency=\"true\" ></iframe>"];
+//         msgs = [$("#hitokoto").text()];
+//         var i = Math.floor(Math.random() * msgs.length);
+//         showMessage(msgs[i], 8000);
+//     }, 15000);
+// });
 /*
 //无聊动动
 jQuery(document).ready(function ($) {
@@ -148,53 +171,53 @@ jQuery(document).ready(function ($) {
 });
 */
 //评论资料
-jQuery(document).ready(function ($) {
-    $("#author").click(function () {
-        showMessage("留下你的尊姓大名！");
-        $(".spig").animate({
-            top: $("#author").offset().top - 70,
-            left: $("#author").offset().left - 170
-        },
-        {
-            queue: false,
-            duration: 1000
-        });
-    });
-    $("#email").click(function () {
-        showMessage("留下你的邮箱，不然就是无头像人士了！");
-        $(".spig").animate({
-            top: $("#email").offset().top - 70,
-            left: $("#email").offset().left - 170
-        },
-        {
-            queue: false,
-            duration: 1000
-        });
-    });
-    $("#url").click(function () {
+// jQuery(document).ready(function ($) {
+//     $("#author").click(function () {
+//         showMessage("留下你的尊姓大名！");
+//         $(".spig").animate({
+//             top: $("#author").offset().top - 70,
+//             left: $("#author").offset().left - 170
+//         },
+//         {
+//             queue: false,
+//             duration: 1000
+//         });
+//     });
+//     $("#email").click(function () {
+//         showMessage("留下你的邮箱，不然就是无头像人士了！");
+//         $(".spig").animate({
+//             top: $("#email").offset().top - 70,
+//             left: $("#email").offset().left - 170
+//         },
+//         {
+//             queue: false,
+//             duration: 1000
+//         });
+//     });
+//     $("#url").click(function () {
 
-        showMessage("快快告诉我你的家在哪里，好让我去参观参观！");
-        $(".spig").animate({
-            top: $("#url").offset().top - 70,
-            left: $("#url").offset().left - 170
-        },
-        {
-            queue: false,
-            duration: 1000
-        });
-    });
-    $("#comment").click(function () {
-        showMessage("认真填写哦！不然会被认作垃圾评论的！我的乖乖~");
-        $(".spig").animate({
-            top: $("#comment").offset().top - 70,
-            left: $("#comment").offset().left - 170
-        },
-        {
-            queue: false,
-            duration: 1000
-        });
-    });
-});
+//         showMessage("快快告诉我你的家在哪里，好让我去参观参观！");
+//         $(".spig").animate({
+//             top: $("#url").offset().top - 70,
+//             left: $("#url").offset().left - 170
+//         },
+//         {
+//             queue: false,
+//             duration: 1000
+//         });
+//     });
+//     $("#comment").click(function () {
+//         showMessage("认真填写哦！不然会被认作垃圾评论的！我的乖乖~");
+//         $(".spig").animate({
+//             top: $("#comment").offset().top - 70,
+//             left: $("#comment").offset().left - 170
+//         },
+//         {
+//             queue: false,
+//             duration: 1000
+//         });
+//     });
+// });
 
 var spig_top = 50;
 //滚动条移动

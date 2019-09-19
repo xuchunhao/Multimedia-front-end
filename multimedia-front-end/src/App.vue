@@ -41,7 +41,7 @@ export default {
 }
 .spig {
     display:block;
-    width:175px;
+    width:100px;
     height:246px;
     position:absolute;
     bottom: 300px;
@@ -50,28 +50,58 @@ export default {
 }
 
 #message{
-    color :#191919;
-    border: 1px solid #c4c4c4;
-    background:#ddd;
-    -moz-border-radius:5px;
-    -webkit-border-radius:5px;
-    border-radius:5px;
-    min-height:1em;
-    padding:5px;
-    top:-45px;
-    position:absolute;
-    text-align:center;
-    width:auto !important;
-    z-index:10000;
-    -moz-box-shadow:0 0 15px #eeeeee;
-    -webkit-box-shadow:0 0 15px #eeeeee;
-    border-color:#eeeeee;
-    box-shadow:0 0 15px #eeeeee;
-    outline:none;
-    a{
-      color:red;
-      text-decoration: none;
+  color :#191919;
+  border: 1px solid #c4c4c4;
+  background:transparent;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  min-height:1em;
+  padding:5px;
+  top:0px;
+  right: -350px;
+  position:absolute;
+  text-align:center;
+  width:300px !important;
+  z-index:10000;
+  -moz-box-shadow:0 0 15px #eeeeee;
+  -webkit-box-shadow:0 0 15px #eeeeee;
+  border-color:#eeeeee;
+  box-shadow:0 0 15px #eeeeee;
+  outline:none;
+  .fl{
+    float: left;
+    cursor: pointer;
+  }
+  .big-logo{
+    display: block;
+    color:rgb(165, 42, 26);
+    text-decoration: none;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url('~@/assets/img/spig/big.webp');
+    background-size: 100% 100%;
+    font-size: 12px;
+  }
+  .pages{
+    display: none;
+    .small-logo{
+    font-size: 10px;
+    float: left;
+    display: block;
+    color:rgb(165, 42, 26);
+    text-decoration: none;
+    margin-top: 5px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url('~@/assets/img/spig/big.webp');
+    background-size: 100% 100%;
     }
+  }
 }
 .mumu{
     width:175px;
