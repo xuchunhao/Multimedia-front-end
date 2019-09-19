@@ -1,17 +1,13 @@
 <template lang="zh-cn">
 <div id="canvas">
-  <div id="app">
+  <!-- <div id="app">
     <div id="spig" class="spig">
       <div id="message"></div>
       <div id="mumu" class="mumu"></div>
     </div>
-    
-    <!-- <div>
-      <router-link to="/navbar">
-        导航栏
-      </router-link>
-    </div> -->
+     -->
     <router-view></router-view>
+    <float-mascot />
   </div>
 </div>
   
@@ -20,6 +16,8 @@
 <script>
 import $ from './plugins/jquery-vendor.js'
 import './plugins/spig.js'
+import mascot from '@/components/mascot.vue'
+
 export default {
   name: 'app',
   data () {
@@ -28,6 +26,9 @@ export default {
       isindex:true
     }
   },
+  components: {
+    'float-mascot': mascot
+  }
 }
 </script>
 
