@@ -1,44 +1,75 @@
 <template>
-  <div id="floating-content" v-on:onmousedown="onPressed" v-on:onmouseup="onReleased">
+  <div
+    id="floating-content"
+    v-bind:style="{left: elementX + 'px', top: elementY + 'px'}"
+    v-on:mousedown="onPressed">
   </div>
 </template>
 
 <script>
 export default {
+  el: "floating-content",
   name: "mascot",
-  data: {
-    userPressed: false
+  data() {
+    return {
+      userPressed: false,
+      userPressedX: -1,
+      userPressedY: -1,
+      baseElementX: -1,
+      baseElementY: -1,
+      elementX: 0,
+      elementY: 0
+    };
   },
   methods: {
     onPressed: function(event) {
-      alert("NMSL");
+      this.userPressed = true;
+      this.userPressedX = event.pageX;
+      this.userPressedY = event.pageY;
+      this.baseElementX = this.elementX;
+      this.baseElementY = this.elementY;
+
+      event.preventDefault();
     },
     onReleased: function(event) {
-      console.log("Released");
+      if (this.userPressed) {
+        event.preventDefault();
+        this.userPressed = false;
+      }
+    },
+    onMoving: function(event) {
+      if (this.userPressed) {
+        event.preventDefault();
+
+        this.elementX = this.baseElementX + event.pageX - this.userPressedX;
+        this.elementY = this.baseElementY + event.pageY - this.userPressedY;
+      }
     }
+  },
+  mounted: function() {
+    window.addEventListener("mousemove", this.onMoving);
+    window.addEventListener("mouseup", this.onReleased);
   }
 };
 </script>
 
 <style scoped>
-@media (orientation: landscape) {
-  #floating-content {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 99;
+#floating-content {
+  position: absolute;
+  z-index: 99;
+  left: 0px;
+  top: 0px;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    width: 175px;
-    height: 125px;
-    background-size: 100% auto;
-    background-image: url("~@/assets/img/home/logo.webp");
-    background-repeat: no-repeat;
-  }
+  width: 175px;
+  height: 125px;
+  background-size: 100% auto;
+  background-image: url("~@/assets/img/home/logo.webp");
+  background-repeat: no-repeat;
 }
 
-@media (orientation: portrait) {
+@media (max-width: 500px) {
   #floating-content {
     display: none;
   }
