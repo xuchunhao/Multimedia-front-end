@@ -1,14 +1,16 @@
 <template>
-  <div
-    id="floating-content"
-    v-bind:style="{left: elementX + 'px', top: elementY + 'px'}"
-    v-on:mousedown="onPressed"
-  ></div>
+  <div id="container" ref="container">
+    <div
+      id="content" ref="content"
+      v-bind:style="{left: elementX + 'px', top: elementY + 'px'}"
+      v-on:mousedown="onPressed" v-on:mouseover="onMoveThrought"
+    ></div>
+  </div>
 </template>
 
 <script>
+import { log } from 'util';
 export default {
-  el: "floating-content",
   name: "mascot",
   data() {
     return {
@@ -35,29 +37,50 @@ export default {
       if (this.userPressed) {
         event.preventDefault();
         this.userPressed = false;
+
+        if ( Math.abs(event.pageX - this.userPressedX) <= 10 && Math.abs(event.pageY - this.userPressedY) <= 10 )
+          this.onClicked(event);
       }
     },
     onMoving: function(event) {
       if (this.userPressed) {
         event.preventDefault();
 
-        this.elementX = this.baseElementX + event.pageX - this.userPressedX;
-        this.elementY = this.baseElementY + event.pageY - this.userPressedY;
+        this.setElementPosition(
+          this.baseElementX + event.pageX - this.userPressedX,
+          this.baseElementY + event.pageY - this.userPressedY
+        );
       }
     },
     onResize: function(event) {
-      console.log("Resize")
+      this.setElementPosition(this.elementX, this.elementY);
+    },
+    setElementPosition: function(x, y) {
+      this.elementX = Math.max(0, Math.min(this.$refs.container.clientWidth - this.$refs.content.clientWidth, x));
+      this.elementY = Math.max(0, Math.min(this.$refs.container.clientHeight - this.$refs.content.clientHeight, y));
+    },
+    onClicked: function(event) {
+      console.log("Clicked");
+    },
+    onMoveThrought: function(event) {
+      console.log("Throught");
     }
   },
   mounted: function() {
     window.addEventListener("mousemove", this.onMoving);
     window.addEventListener("mouseup", this.onReleased);
+    window.addEventListener("resize", this.onResize);
   }
 };
 </script>
 
 <style scoped>
-#floating-content {
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+#content {
   position: absolute;
   z-index: 99;
   left: 0px;
@@ -73,7 +96,7 @@ export default {
 }
 
 @media (max-width: 500px) {
-  #floating-content {
+  #content {
     display: none;
   }
 }
