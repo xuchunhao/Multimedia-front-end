@@ -1,15 +1,17 @@
 <template>
   <div id="container" ref="container">
     <div
-      id="content" ref="content"
+      id="content"
+      ref="content"
       v-bind:style="{left: elementX + 'px', top: elementY + 'px'}"
-      v-on:mousedown="onPressed" v-on:mouseover="onMoveThrought"
+      v-on:mousedown="onPressed"
+      v-on:mouseover="onMoveThrought"
     ></div>
   </div>
 </template>
 
 <script>
-import { log } from 'util';
+import { log } from "util";
 export default {
   name: "mascot",
   data() {
@@ -38,7 +40,10 @@ export default {
         event.preventDefault();
         this.userPressed = false;
 
-        if ( Math.abs(event.pageX - this.userPressedX) <= 10 && Math.abs(event.pageY - this.userPressedY) <= 10 )
+        if (
+          Math.abs(event.pageX - this.userPressedX) <= 10 &&
+          Math.abs(event.pageY - this.userPressedY) <= 10
+        )
           this.onClicked(event);
       }
     },
@@ -56,8 +61,20 @@ export default {
       this.setElementPosition(this.elementX, this.elementY);
     },
     setElementPosition: function(x, y) {
-      this.elementX = Math.max(0, Math.min(this.$refs.container.clientWidth - this.$refs.content.clientWidth, x));
-      this.elementY = Math.max(0, Math.min(this.$refs.container.clientHeight - this.$refs.content.clientHeight, y));
+      this.elementX = Math.max(
+        0,
+        Math.min(
+          this.$refs.container.clientWidth - this.$refs.content.clientWidth,
+          x
+        )
+      );
+      this.elementY = Math.max(
+        0,
+        Math.min(
+          this.$refs.container.clientHeight - this.$refs.content.clientHeight,
+          y
+        )
+      );
     },
     onClicked: function(event) {
       console.log("Clicked");
@@ -74,25 +91,24 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #container {
   width: 100%;
   height: 100%;
-}
+  #content {
+    position: absolute;
+    z-index: 99;
+    left: 0px;
+    top: 0px;
 
-#content {
-  position: absolute;
-  z-index: 99;
-  left: 0px;
-  top: 0px;
+    overflow: hidden;
 
-  overflow: hidden;
-
-  width: 175px;
-  height: 125px;
-  background-size: 100% auto;
-  background-image: url("~@/assets/img/home/logo.webp");
-  background-repeat: no-repeat;
+    width: 175px;
+    height: 125px;
+    background-size: 100% auto;
+    background-image: url("~@/assets/img/home/logo.webp");
+    background-repeat: no-repeat;
+  }
 }
 
 @media (max-width: 500px) {
