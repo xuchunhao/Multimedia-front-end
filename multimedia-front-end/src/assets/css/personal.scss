@@ -1,7 +1,7 @@
 .personal{
   .el-col{
     // border: 1px solid black;
-    text-align: center;
+    // text-align: center;
     position: relative;
     .porotrait-img{
       border-radius: 50%;
@@ -45,7 +45,8 @@
   }
 
   .comment-content{
-    padding: 15px 0;
+    border: 1px solid black;
+    padding: 15px 20px;
 		margin-top: 5px;
     background: #eee;
 		border-radius: 3px;
@@ -55,12 +56,13 @@
 			}
 			div {
         span{
-          color: #666;
-          border-bottom: 1px solid #666;
+          // color: #666;
+          border-bottom: 1.5px solid #000;
+          font-weight: 600;
         }
 				.personal-comment{
-          height: 60px;
-          border: none;
+          color: #666;
+          // height: 60px;
         }
 			}
   }

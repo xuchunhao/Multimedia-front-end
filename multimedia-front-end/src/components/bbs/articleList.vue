@@ -4,7 +4,7 @@
       <el-row type="flex" class="title-line">
         <el-col :span="24">
           <img :src="'https://dmt.lcworkroom.cn/api/get/portrait/' + articleInfo.user_id" alt />
-          <span>{{articleInfo.user_id}}</span>
+          <span>{{articleInfo.nickname}}</span>
           <span>【{{articleInfo.title}}】</span>
         </el-col>
       </el-row>
@@ -54,10 +54,10 @@
       </el-row>
     </el-dialog>
     <el-row type="flex" justify="end"  class="finally">
-      <el-col :span="4">
+      <el-col :span="3">
         <el-button @click="dialogVisible=true">发布评论</el-button>
       </el-col>
-      <el-col :span="4">
+      <el-col :span="3">
         <router-link to="/bbs">
           <el-button class="back-bbs">返回论坛</el-button>
         </router-link>
@@ -124,16 +124,12 @@ export default {
   },
   mounted() {
     this.item = this.$route.params.item;
-    // console.log(this.item)
-    // console.log(this.item.article_id)
     api
       .getArticleListMore({
         article_id: this.item.article_id
       })
       .then(res => {
-        // console.log(res)
         this.articleInfo = res.data.data.list[0];
-        // console.log(this.articleInfo)
         api
           .getCommentList({
             article_id: this.item.article_id
@@ -146,7 +142,6 @@ export default {
             for (let i = 0, j = this.commentList.length; i < j; i += chunk) {
               this.sliceCommentList.push(this.commentList.slice(i, i + chunk));
             }
-            // console.log(this.sliceCommentList)
           });
       });
 
@@ -162,17 +157,8 @@ export default {
         for (let i = 0, j = this.commentList.length; i < j; i += chunk) {
           this.sliceCommentList.push(this.commentList.slice(i, i + chunk));
         }
-        // console.log(this.sliceCommentList)
       });
   }
-  // mounted () {
-  //   api.getArticleList({
-
-  //   }).then(res => {
-  //     console.log(res,res.data.data.list);
-  //     this.articleList = res.data.data.list;
-  //   })
-  // }
 };
 </script>
 

@@ -60,6 +60,10 @@ export default new Router({
         name:'article',
         component: () => import('@/components/bbs/articleList.vue')
       },{
+        path:'/s/:activity',
+        name:'activity',
+        component: () => import('@/components/bbs/activityList.vue')
+      },{
         path: '/login',
         name: 'login',
         component: () => import('@/components/login.vue')

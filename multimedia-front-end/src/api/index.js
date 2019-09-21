@@ -54,6 +54,30 @@ var api = {
     let token = this.getCookie('token');
     return axios.post('/api/user/nickname?token=' + token,params)
   },
+  getActive(params){
+    let token = this.getCookie('token');
+    return axios.post('/api/get/active/list?token=' + token,params)
+  },
+  getActiveList(params){
+    let token = this.getCookie('token');
+    return axios.get('/api/get/active/list?token=' + token +'&mode=1',params)
+  },
+  addActivity(params){
+    let token = this.getCookie('token');
+    return axios.post('/api/active?token=' + token,params)
+  },
+  getActivityPeople(params){
+    let token = this.getCookie('token');
+    return axios.post('/api/get/active/member?token=' + token,params)
+  },
+  joinActivity(params){
+    let token = this.getCookie('token');
+    return axios.post('/api/active?token=' + token,params)
+  },
+  exitActivity(params){
+    let token = this.getCookie('token');
+    return axios.post('/api/active?token=' + token,params)
+  },
   getCookie(cname) {
     var name = cname + '=';
     var ca = document.cookie.split(';');
