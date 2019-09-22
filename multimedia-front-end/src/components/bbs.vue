@@ -5,11 +5,11 @@
         <el-row type="flex" justify="space-between">
           <el-col :span="6">
             <el-row>
-              <el-col :span="12">
-                <el-button @click="isShow = 'article'" class="btn-article">帖 子</el-button>
+              <el-col :span="8">
+                <el-button :class="{'btn-active': isShow != 'article'}" @click="isShow = 'article'" class="btn-article">帖 子</el-button>
               </el-col>
-              <el-col :span="12">
-                <el-button @click="isShow = 'activity'" class="btn-activity">活 动</el-button>
+              <el-col :span="8">
+                <el-button :class="{'btn-active': isShow != 'activity'}" @click="isShow = 'activity'" class="btn-activity">活 动</el-button>
               </el-col>
             </el-row>
           </el-col>

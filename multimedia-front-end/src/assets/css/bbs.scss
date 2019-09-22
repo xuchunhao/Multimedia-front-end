@@ -5,7 +5,7 @@
 				float: right;
 				color: #fff;
 				background-color: rgb(165, 42, 26);
-				padding: 10px;
+				padding: 10px 20px;
 				margin-right: 20px;
 				// margin-right: 50px;
 				font-size: 20px;
@@ -17,7 +17,14 @@
 				&:focus {
 					border: none;
 				}
+				&.btn-active{
+					background-color: transparent;
+					border: 2px solid #666;
+					color: #666;
+					box-sizing: border-box;
+				}
 			}
+
 		}
   }
   .bbs-top{
